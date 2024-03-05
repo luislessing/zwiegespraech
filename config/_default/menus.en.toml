@@ -1,0 +1,45 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[main]]
+name = "Aktuell"
+url = "aktuell/"
+weight = 2
+
+[[main]]
+name = "Über uns"
+url = "about/"
+weight = 3
+
+[[main]]
+name = "Ensemble"
+url = "authors/"
+weight = 4
+
+[[main]]
+name = "Archiv"
+url = "blog/"
+weight = 5
+
+
+
+# footer menu
+[[footer]]
+name = "Über uns"
+url = "about/"
+weight = 1
+
+[[footer]]
+name = "Elements"
+url = "elements/"
+weight = 2
+
+[[footer]]
+name = "Privacy Policy"
+url = "privacy-policy/"
+weight = 3
