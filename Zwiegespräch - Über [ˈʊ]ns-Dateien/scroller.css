@@ -1,0 +1,19 @@
+.scroller-container {
+	position: relative;
+	width: 100%;
+}
+
+.scroller-container .scroller-box {
+	width: 100%;
+	overflow: hidden;
+}
+
+.scroller-container .scroller-box .scrollme-box {
+	position: absolute;
+	white-space: nowrap;
+	display: inline;
+}
+
+.scroller-container .scroller-box .scrollme-box span {
+	padding: 0px 5px;
+}
