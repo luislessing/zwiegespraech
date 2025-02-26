@@ -1,0 +1,20 @@
+src/
+├── app/
+│   ├── page.tsx             # Startseite
+│   ├── layout.tsx           # Haupt-Layout 
+│   ├── produktion/
+│   │   └── page.tsx         # Aktuelle Produktion
+│   ├── ueber-uns/
+│   │   └── page.tsx         # Über uns
+│   ├── kalender/
+│   │   └── page.tsx         # Kalender
+│   ├── archiv/
+│   │   └── page.tsx         # Archiv
+│   └── kontakt/
+│       └── page.tsx         # Kontakt
+├── components/
+│   ├── Header.tsx           # Kopfzeile mit Navigation
+│   ├── Footer.tsx           # Fußzeile
+│   └── HeroSlideshow.tsx    # Slideshow-Komponente
+└── styles/
+    └── globals.css          # Globale Styles
