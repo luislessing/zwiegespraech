@@ -19,3 +19,50 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Zusätzliche benutzerdefinierte Stile */
+
+/* Aspect Ratio für Videos und Bilder */
+.aspect-w-16 {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.aspect-w-16 > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.aspect-w-1 {
+  position: relative;
+  padding-bottom: 100%; /* 1:1 Aspect Ratio (Square) */
+}
+
+.aspect-w-1 > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+/* Animation für Newsticker */
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+/* Font-Familie für Serifen-Schrift */
+.font-serif {
+  font-family: 'Sanchez', serif, system-ui;
+}

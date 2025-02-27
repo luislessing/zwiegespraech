@@ -44,10 +44,10 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-center mb-12">Eindrücke</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow bg-white">
-                <img src="https://via.placeholder.com/600x400" alt="Theaterszene" className="w-full h-64 object-cover" />
+                <img src="/public/images/picture-400.jpeg" alt="Theaterszene" className="w-full h-64 object-cover" />
               </div>
               <div className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow bg-white">
-                <img src="https://via.placeholder.com/600x400" alt="Theaterszene" className="w-full h-64 object-cover" />
+                <img src="public/images/picture-400.png" alt="Theaterszene" className="w-full h-64 object-cover" />
               </div>
               <div className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow bg-white">
                 <img src="https://via.placeholder.com/600x400" alt="Theaterszene" className="w-full h-64 object-cover" />

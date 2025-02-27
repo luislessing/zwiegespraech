@@ -21,7 +21,7 @@ export default function HeroSlideshow() {
     },
     {
       title: "Alles Weitere wird Kunst",
-      image: "https://via.placeholder.com/1600x800", // Hier später richtiges Bild einsetzen
+      image: "public/images/picture-1600.jpeg", // Hier später richtiges Bild einsetzen
       alt: "Theaterszene"
     },
     {
