@@ -5,9 +5,23 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 
+// TypeScript-Interfaces für bessere Typisierung
+interface Event {
+  id: number;
+  title: string;
+  date: Date;
+  location: string;
+  description: string;
+  ticketLink: string;
+  price: string;
+  image?: string;
+  cast?: string[];
+  direction?: string;
+}
+
 export default function KalenderPage() {
   // Sample upcoming events - Hier Ihre tatsächlichen Events einfügen
-  const [events, setEvents] = useState([
+  const [events] = useState<Event[]>([
     {
       id: 1,
       title: "Kunst",
@@ -45,7 +59,7 @@ export default function KalenderPage() {
   ]);
 
   // State für das ausgewählte Event
-  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
 
   // Generate month names in German
   const months = [
@@ -83,20 +97,20 @@ export default function KalenderPage() {
   };
 
   // Get days in month
-  const getDaysInMonth = (month, year) => {
+  const getDaysInMonth = (month: number, year: number): number => {
     return new Date(year, month + 1, 0).getDate();
   };
 
   // Get day of week for first day of month (0 = Sunday, 1 = Monday, etc.)
-  const getFirstDayOfMonth = (month, year) => {
+  const getFirstDayOfMonth = (month: number, year: number): number => {
     return new Date(year, month, 1).getDay();
   };
 
   // Build calendar days array
-  const buildCalendarDays = () => {
+  const buildCalendarDays = (): (number | null)[] => {
     const daysInMonth = getDaysInMonth(displayMonth, displayYear);
     const firstDayOfMonth = getFirstDayOfMonth(displayMonth, displayYear);
-    const days = [];
+    const days: (number | null)[] = [];
 
     // Fill in empty cells for days before the first of the month
     // Adjust for Monday as first day of week (European standard)
@@ -115,9 +129,8 @@ export default function KalenderPage() {
   };
 
   // Check if a given day has events
-  const hasEvents = (day) => {
+  const hasEvents = (day: number | null): boolean => {
     if (!day) return false;
-    const date = new Date(displayYear, displayMonth, day);
     return events.some(event => {
       const eventDate = new Date(event.date);
       return eventDate.getDate() === day &&
@@ -127,9 +140,8 @@ export default function KalenderPage() {
   };
 
   // Get events for a given day
-  const getEventsForDay = (day) => {
+  const getEventsForDay = (day: number | null): Event[] => {
     if (!day) return [];
-    const date = new Date(displayYear, displayMonth, day);
     return events.filter(event => {
       const eventDate = new Date(event.date);
       return eventDate.getDate() === day &&
