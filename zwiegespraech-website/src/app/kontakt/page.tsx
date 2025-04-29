@@ -1,12 +1,22 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 
+// TypeScript Interface für das Formular
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  telephone: string;
+  message: string;
+  gdprConsent: boolean;
+}
+
 export default function KontaktPage() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
     email: '',
@@ -15,10 +25,11 @@ export default function KontaktPage() {
     gdprConsent: false
   });
   
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [formError, setFormError] = useState('');
+  const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
+  const [formError, setFormError] = useState<string>('');
 
-  const handleChange = (e) => {
+  // Event-Handler mit TypeScript-Typen
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -26,7 +37,8 @@ export default function KontaktPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  // Formular-Submit-Handler mit TypeScript-Typen
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     // Basic validation
