@@ -28,13 +28,23 @@ export default function KontaktPage() {
   const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
   const [formError, setFormError] = useState<string>('');
 
-  // Event-Handler mit TypeScript-Typen
+  // Event-Handler mit TypeScript-Typen - Type Guard für checked
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
+    const { name, value, type } = e.target;
+    
+    // Überprüfe, ob es ein Checkbox-Input ist und handle checked entsprechend
+    if (type === 'checkbox') {
+      const checked = (e.target as HTMLInputElement).checked;
+      setFormData(prev => ({
+        ...prev,
+        [name]: checked
+      }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
   };
 
   // Formular-Submit-Handler mit TypeScript-Typen
@@ -224,6 +234,7 @@ export default function KontaktPage() {
           </div>
         </section>
 
+        {/* Rest der Seite bleibt unverändert */}
         {/* News Bar */}
         <section className="py-4 bg-gray-900 text-white overflow-hidden">
           <div className="container mx-auto px-4">
