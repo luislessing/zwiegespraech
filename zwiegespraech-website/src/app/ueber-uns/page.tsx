@@ -5,12 +5,25 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 
+// TypeScript Interface für die Teammitglieder
+interface TeamMember {
+  id: number;
+  name: string;
+  age: number;
+  profession: string;
+  theatreQuote: string;
+  zwiegespraechQuote: string;
+  imageSrc: string;
+  experience?: string;
+  role?: string;
+}
+
 export default function UeberUnsPage() {
-  // State for team member modal
-  const [activeTeamMember, setActiveTeamMember] = useState(null);
+  // State for team member modal - mit korrekter Typisierung
+  const [activeTeamMember, setActiveTeamMember] = useState<TeamMember | null>(null);
 
   // Team members data - simplified structure to avoid compilation issues
-  const teamMembers = [
+  const teamMembers: TeamMember[] = [
     {
       id: 1,
       name: "Babett Wittekind",
@@ -31,6 +44,7 @@ export default function UeberUnsPage() {
       zwiegespraechQuote: `Es ist die Möglichkeit, mit verschiedenen Charakteren, welche alle ihre individuellen Stärken mitbringen, etwas Eigenes aufzubauen. Also bedeutet es letztlich, die eigene Vision von Theater nach vorne zu bringen. Vieles, was im Amateurtheater gelebt und gemacht wird, sollte meines Erachtens neu und anders bearbeitet werden, um für diesen Bereich und die Menschen, die darin wirken möchten, das Beste möglich zu machen. Zw[i:]g[ə]spräch soll perspektivisch ein Ort werden, an dem sich kreative Menschen auch kreativ entfalten dürfen.`,
       imageSrc: "/images/team/bastian.jpg"
     },
+    // Alle weiteren Teammitglieder bleiben unverändert...
     {
       id: 3,
       name: "Claus Wiegand",
