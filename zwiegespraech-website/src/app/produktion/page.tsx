@@ -13,30 +13,30 @@ export default function ProduktionPage() {
       name: "Serge",
       actor: "Kevin Nolting",
       quote: '„Für mich ist es nicht weiß. Wenn ich sage, für mich, dann meine ich objektiv. Objektiv gesehen ist es nicht weiß. […] Sogar rot ist drin."',
-      images: ["/images/serge-1.jpg", "/images/serge-2.jpg"]
+      images: ["/images/Kunst/Serge.jpeg", "/images/Kunst/Serge2.jpeg"]
     },
     {
       id: 2,
       name: "Marc",
       actor: "Bastian Bühler",
       quote: '„Ein Gedanke hinter sowas! … Was du siehst, ist zwar eine Scheiße, doch sei unbesorgt, sei unbesorgt, es steckt ein Gedanke dahinter!"',
-      images: ["/images/marc-1.jpg", "/images/marc-2.jpg"]
+      images: ["/images/Kunst/Marc.jpg", "/images/Kunst/Marc2.jpeg"]
     },
     {
       id: 3,
       name: "Yvan",
       actor: "Luis Lessing",
       quote: '„Ihr [wisst], [dass] ich weinen kann… Ich kann hier auf der Stelle anfangen zu weinen … Ich bin übrigens nicht weit davon entfernt."',
-      images: ["/images/yvan-1.jpg", "/images/yvan-2.jpg"]
+      images: ["/images/Kunst/yvan.jpeg", "/images/Kunst/yvan2.jpeg"]
     }
   ];
 
   const galleryImages = [
-    "/images/kunst-1.jpg",
-    "/images/kunst-2.jpg",
-    "/images/kunst-3.jpg",
-    "/images/kunst-4.jpg",
-    "/images/kunst-5.jpg"
+    "/images/Kunst/impression1.jpeg",
+    "/images/Kunst/impression2.jpeg",
+    "/images/Kunst/impression3.jpeg",
+    "/images/Kunst/impression4.jpeg",
+    "/images/Kunst/impression5.jpeg"
   ];
 
   return (
@@ -71,16 +71,15 @@ export default function ProduktionPage() {
               </p>
 
               {/* Video Trailer */}
-              <div className="relative pt-[56.25%] bg-black mb-16">
-                <video 
-                  className="absolute top-0 left-0 w-full h-full" 
-                  controls
-                  poster="/images/kunst-poster.jpg"
-                >
-                  <source src="/videos/kunst-trailer.mp4" type="video/mp4" />
-                  Ihr Browser unterstützt das Video-Tag nicht.
-                </video>
-              </div>
+             <div className="relative pt-[56.25%] bg-black mb-16">
+  <iframe
+    className="absolute top-0 left-0 w-full h-full"
+    src="https://www.youtube.com/embed/qdK0_06D7Fo" // Ersetzen Sie YOUTUBE_VIDEO_ID mit Ihrer tatsächlichen YouTube-Video-ID
+    title="Kunst - Trailer"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
             </div>
           </div>
         </section>

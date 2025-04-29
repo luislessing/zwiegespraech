@@ -15,20 +15,10 @@ export default function HeroSlideshow() {
   const slides: SlideProps[] = [
     {
       title: "Zw[i:]g[ə]spräch",
-      image: "https://via.placeholder.com/1600x800", // Hier später richtiges Bild einsetzen
+      image: "images/picture-1600.jpeg", // Hier später richtiges Bild einsetzen
       alt: "Theater Logo",
       subtitle: "Alles Weitere wird Kunst"
     },
-    {
-      title: "Alles Weitere wird Kunst",
-      image: "public/images/picture-1600.jpeg", // Hier später richtiges Bild einsetzen
-      alt: "Theaterszene"
-    },
-    {
-      title: "Willkommen bei Zw[i:]g[ə]spräch",
-      image: "https://via.placeholder.com/1600x800", // Hier später richtiges Bild einsetzen
-      alt: "Gruppenphoto"
-    }
   ];
 
   useEffect(() => {
@@ -47,9 +37,9 @@ export default function HeroSlideshow() {
           key={index}
           className={`absolute inset-0 transition-opacity duration-1000 flex items-center justify-center ${index === activeSlide ? 'opacity-100' : 'opacity-0'}`}
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${slide.image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
+             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${slide.image})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
           }}
         >
           <div className="text-center text-white">

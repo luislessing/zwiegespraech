@@ -106,7 +106,7 @@ export default function UeberUnsPage() {
       role: "Mitwirkung bei der Webseitenerstellung und Pflege",
       theatreQuote: `Theater bedeutet für mich eine wunderbare Welt voller Geschichten, Emotionen und Kreativität. Es ist eine Kunstform, die es ermöglicht, in verschiedene Rollen und Welten einzutauchen und bietet eine einzigartige Möglichkeit, menschliche Erfahrungen und Gefühle zu erkunden.`,
       zwiegespraechQuote: `Für mich bedeutet ein Zwiegespräch eine intime und direkte Form der Kommunikation, bei der zwei Personen offen und ehrlich miteinander sprechen. Es ermöglicht die Perspektive des anderen zu erfassen.`,
-      imageSrc: "/images/team/mandy.jpg"
+      imageSrc: "/images/team/mandy.jpeg"
     },
     {
       id: 10,
@@ -181,7 +181,7 @@ export default function UeberUnsPage() {
       role: "Schauspiel und Bühnenbau",
       theatreQuote: "Theater ist eine große Leidenschaft, die ich 2010 durch Schulfreunde entdeckt habe. Seitdem lässt es mich nicht mehr los. Durch die vielen Möglichkeiten, die ein Theaterverein bietet, wird es nie langweilig und es gibt sehr viel Abwechslung durch die verschiedenen Bereiche.",
       zwiegespraechQuote: "Neue kulturelle Bereiche, besonders im Bereich Theater, sind wichtig. Daher freue ich mich über jede Möglichkeit, Menschen ein Hobby oder Unterhaltung zu schenken.",
-      imageSrc: "/images/team/yannick.jpg"
+      imageSrc: "/images/team/yannick.jpeg"
     }
   ];
 

@@ -6,22 +6,50 @@ import Footer from '@/components/Footer';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 export default function KalenderPage() {
-  // Sample upcoming events (currently empty as per original page)
+  // Sample upcoming events - Hier Ihre tatsächlichen Events einfügen
   const [events, setEvents] = useState([
-    // Example structure for future events:
-    // {
-    //   id: 1,
-    //   title: "Kunst",
-    //   date: new Date(2025, 2, 15, 19, 30), // March 15, 2025, 19:30
-    //   location: "Theater Name, Stadt",
-    //   description: "Aufführung unserer aktuellen Produktion",
-    //   ticketLink: "/tickets"
-    // }
+    {
+      id: 1,
+      title: "Kunst",
+      date: new Date(2025, 4, 15, 19, 30), // 15. Mai 2025, 19:30
+      location: "Stadthalle, Rheine",
+      description: "Aufführung unserer aktuellen Produktion von Yasmina Rezas Stück 'Kunst'",
+      ticketLink: "https://luislessing.de",
+      price: "15€ / 10€ ermäßigt",
+      image: "/images/kunst-poster.jpg",
+      cast: ["Kevin Nolting", "Bastian Bühler", "Luis Lessing"],
+      direction: "Sebastian Narhofer"
+    },
+    {
+      id: 2,
+      title: "Kunst",
+      date: new Date(2025, 4, 16, 19, 30), // 16. Mai 2025, 19:30
+      location: "Stadthalle, Rheine",
+      description: "Aufführung unserer aktuellen Produktion von Yasmina Rezas Stück 'Kunst'",
+      ticketLink: "/tickets",
+      price: "15€ / 10€ ermäßigt",
+      image: "/images/kunst-poster.jpg",
+      cast: ["Kevin Nolting", "Bastian Bühler", "Luis Lessing"],
+      direction: "Sebastian Narhofer"
+    },
+    {
+      id: 3,
+      title: "Workshop: Theaterimprovisation",
+      date: new Date(2025, 5, 10, 15, 0), // 10. Juni 2025, 15:00
+      location: "Proberaum, Rheine",
+      description: "Workshop für Anfänger und Fortgeschrittene. Lernen Sie die Grundlagen der Theaterimprovisation in einer entspannten Atmosphäre.",
+      ticketLink: "/tickets",
+      price: "20€",
+      image: "/images/workshop-poster.jpg"
+    }
   ]);
+
+  // State für das ausgewählte Event
+  const [selectedEvent, setSelectedEvent] = useState(null);
 
   // Generate month names in German
   const months = [
-    "Januar", "Februar", "März", "April", "Mai", "Juni", 
+    "Januar", "Februar", "März", "April", "Mai", "Juni",
     "Juli", "August", "September", "Oktober", "November", "Dezember"
   ];
 
@@ -69,20 +97,20 @@ export default function KalenderPage() {
     const daysInMonth = getDaysInMonth(displayMonth, displayYear);
     const firstDayOfMonth = getFirstDayOfMonth(displayMonth, displayYear);
     const days = [];
-    
+
     // Fill in empty cells for days before the first of the month
     // Adjust for Monday as first day of week (European standard)
     const firstDayAdjusted = (firstDayOfMonth === 0) ? 6 : firstDayOfMonth - 1;
-    
+
     for (let i = 0; i < firstDayAdjusted; i++) {
       days.push(null);
     }
-    
+
     // Add days of the month
     for (let i = 1; i <= daysInMonth; i++) {
       days.push(i);
     }
-    
+
     return days;
   };
 
@@ -92,8 +120,8 @@ export default function KalenderPage() {
     const date = new Date(displayYear, displayMonth, day);
     return events.some(event => {
       const eventDate = new Date(event.date);
-      return eventDate.getDate() === day && 
-             eventDate.getMonth() === displayMonth && 
+      return eventDate.getDate() === day &&
+             eventDate.getMonth() === displayMonth &&
              eventDate.getFullYear() === displayYear;
     });
   };
@@ -104,8 +132,8 @@ export default function KalenderPage() {
     const date = new Date(displayYear, displayMonth, day);
     return events.filter(event => {
       const eventDate = new Date(event.date);
-      return eventDate.getDate() === day && 
-             eventDate.getMonth() === displayMonth && 
+      return eventDate.getDate() === day &&
+             eventDate.getMonth() === displayMonth &&
              eventDate.getFullYear() === displayYear;
     });
   };
@@ -116,7 +144,7 @@ export default function KalenderPage() {
   return (
     <div className="min-h-screen bg-gray-100 text-gray-900 flex flex-col">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
@@ -124,7 +152,7 @@ export default function KalenderPage() {
           <h2 className="text-3xl font-normal mb-8 text-center">Unsere Termine und Aufführungen</h2>
         </div>
       </section>
-      
+
       <main className="flex-grow">
         {/* Calendar Section */}
         <section className="py-16 bg-white">
@@ -132,7 +160,7 @@ export default function KalenderPage() {
             <div className="max-w-4xl mx-auto">
               {/* Calendar Navigation */}
               <div className="flex justify-between items-center mb-8">
-                <button 
+                <button
                   onClick={previousMonth}
                   className="p-2 bg-gray-200 hover:bg-gray-300 rounded-md transition-colors"
                 >
@@ -141,14 +169,14 @@ export default function KalenderPage() {
                 <h2 className="text-2xl font-bold">
                   {months[displayMonth]} {displayYear}
                 </h2>
-                <button 
+                <button
                   onClick={nextMonth}
                   className="p-2 bg-gray-200 hover:bg-gray-300 rounded-md transition-colors"
                 >
                   Nächster Monat &rarr;
                 </button>
               </div>
-              
+
               {/* Calendar Grid */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 {/* Day headers - European format (Monday first) */}
@@ -161,18 +189,18 @@ export default function KalenderPage() {
                   <div>Sa</div>
                   <div>So</div>
                 </div>
-                
+
                 {/* Calendar Days */}
                 <div className="grid grid-cols-7">
                   {calendarDays.map((day, index) => (
-                    <div 
-                      key={index} 
+                    <div
+                      key={index}
                       className={`
                         border border-gray-200 min-h-24
                         ${!day ? 'bg-gray-100' : 'hover:bg-gray-50'}
-                        ${day === currentDate.getDate() && 
-                          displayMonth === currentDate.getMonth() && 
-                          displayYear === currentDate.getFullYear() 
+                        ${day === currentDate.getDate() &&
+                          displayMonth === currentDate.getMonth() &&
+                          displayYear === currentDate.getFullYear()
                             ? 'bg-gray-200' : ''}
                         ${hasEvents(day) ? 'relative' : ''}
                       `}
@@ -184,9 +212,10 @@ export default function KalenderPage() {
                             {hasEvents(day) && (
                               <div className="mt-1">
                                 {getEventsForDay(day).map((event) => (
-                                  <div 
+                                  <div
                                     key={event.id}
-                                    className="bg-gray-900 text-white text-sm rounded p-1 mb-1 overflow-hidden"
+                                    className="bg-gray-900 text-white text-sm rounded p-1 mb-1 overflow-hidden cursor-pointer hover:bg-gray-800 transition-colors"
+                                    onClick={() => setSelectedEvent(event)}
                                   >
                                     <p className="font-bold">{event.title}</p>
                                     <p>{new Date(event.date).toLocaleTimeString('de-DE', {hour: '2-digit', minute:'2-digit'})}</p>
@@ -201,7 +230,7 @@ export default function KalenderPage() {
                   ))}
                 </div>
               </div>
-              
+
               {/* No events message */}
               {events.length === 0 && (
                 <div className="mt-12 p-8 bg-gray-100 rounded-lg text-center">
@@ -258,6 +287,82 @@ export default function KalenderPage() {
           </div>
         </section>
       </main>
+
+      {/* Event Details Modal */}
+      {selectedEvent && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6 relative">
+              <button
+                onClick={() => setSelectedEvent(null)}
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              <h3 className="text-2xl font-bold mb-2">{selectedEvent.title}</h3>
+              <p className="text-gray-600 mb-4">
+                {new Date(selectedEvent.date).toLocaleDateString('de-DE', {
+                  weekday: 'long',
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })} um {new Date(selectedEvent.date).toLocaleTimeString('de-DE', {
+                  hour: '2-digit',
+                  minute: '2-digit'
+                })} Uhr
+              </p>
+
+              <p className="mb-2"><span className="font-medium">Ort:</span> {selectedEvent.location}</p>
+
+              {selectedEvent.price && (
+                <p className="mb-2"><span className="font-medium">Preis:</span> {selectedEvent.price}</p>
+              )}
+
+              {selectedEvent.description && (
+                <div className="mt-4 mb-6">
+                  <p className="font-medium mb-1">Beschreibung:</p>
+                  <p>{selectedEvent.description}</p>
+                </div>
+              )}
+
+              {selectedEvent.cast && selectedEvent.cast.length > 0 && (
+                <div className="mt-4">
+                  <p className="font-medium mb-1">Besetzung:</p>
+                  <p>{selectedEvent.cast.join(", ")}</p>
+                </div>
+              )}
+
+              {selectedEvent.direction && (
+                <p className="mb-2"><span className="font-medium">Regie:</span> {selectedEvent.direction}</p>
+              )}
+
+              {selectedEvent.image && (
+                <div className="mt-4">
+                  <img
+                    src={selectedEvent.image}
+                    alt={selectedEvent.title}
+                    className="w-full h-auto rounded-md"
+                  />
+                </div>
+              )}
+
+              {selectedEvent.ticketLink && (
+                <div className="mt-6 text-center">
+                  <a
+                    href={selectedEvent.ticketLink}
+                    className="bg-gray-900 hover:bg-gray-800 text-white font-bold py-2 px-6 rounded-md transition-colors inline-block"
+                  >
+                    Tickets reservieren
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
       <ScrollToTopButton />
