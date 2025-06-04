@@ -22,41 +22,18 @@ interface Event {
 export default function KalenderPage() {
   // Sample upcoming events - Hier Ihre tatsächlichen Events einfügen
   const [events] = useState<Event[]>([
-    {
-      id: 1,
-      title: "Kunst",
-      date: new Date(2025, 4, 15, 19, 30), // 15. Mai 2025, 19:30
-      location: "Stadthalle, Rheine",
-      description: "Aufführung unserer aktuellen Produktion von Yasmina Rezas Stück 'Kunst'",
-      ticketLink: "https://luislessing.de",
-      price: "15€ / 10€ ermäßigt",
-      image: "/images/kunst-poster.jpg",
-      cast: ["Kevin Nolting", "Bastian Bühler", "Luis Lessing"],
-      direction: "Sebastian Narhofer"
-    },
-    {
-      id: 2,
-      title: "Kunst",
-      date: new Date(2025, 4, 16, 19, 30), // 16. Mai 2025, 19:30
-      location: "Stadthalle, Rheine",
-      description: "Aufführung unserer aktuellen Produktion von Yasmina Rezas Stück 'Kunst'",
-      ticketLink: "/tickets",
-      price: "15€ / 10€ ermäßigt",
-      image: "/images/kunst-poster.jpg",
-      cast: ["Kevin Nolting", "Bastian Bühler", "Luis Lessing"],
-      direction: "Sebastian Narhofer"
-    },
-    {
-      id: 3,
-      title: "Workshop: Theaterimprovisation",
-      date: new Date(2025, 5, 10, 15, 0), // 10. Juni 2025, 15:00
-      location: "Proberaum, Rheine",
-      description: "Workshop für Anfänger und Fortgeschrittene. Lernen Sie die Grundlagen der Theaterimprovisation in einer entspannten Atmosphäre.",
-      ticketLink: "/tickets",
-      price: "20€",
-      image: "/images/workshop-poster.jpg"
-    }
-  ]);
+
+//    {
+//      id: 3,
+//      title: "Workshop: Theaterimprovisation",
+//      date: new Date(2025, 5, 10, 15, 0), // 10. Juni 2025, 15:00
+//      location: "Proberaum, Rheine",
+//      description: "Workshop für Anfänger und Fortgeschrittene. Lernen Sie die Grundlagen der Theaterimprovisation in einer entspannten Atmosphäre.",
+//      ticketLink: "/tickets",
+//      price: "20€",
+//      image: "/images/workshop-poster.jpg"
+//    }
+ ]);
 
   // State für das ausgewählte Event
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);

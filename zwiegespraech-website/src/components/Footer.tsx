@@ -31,8 +31,6 @@ export default function Footer() {
           
           <div>
             <Link href="/impressum" className="text-gray-400 hover:text-white transition-colors">Impressum</Link>
-            <span className="mx-2 text-gray-600">|</span>
-            <Link href="/datenschutz" className="text-gray-400 hover:text-white transition-colors">Datenschutzerklärung</Link>
           </div>
         </div>
         
