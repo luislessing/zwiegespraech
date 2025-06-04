@@ -195,7 +195,7 @@ export default function UeberUnsPage() {
     {
       id: 13,
       name: "Sebastian Narhofer",
-      birthYear: 1994,
+      birthYear: 1993,
       birthQuarter: 4, // Basierend auf aktuellem Alter 30
       profession: "Theateraktivität: seit 2009",
       experience: "Amateurtheater, Studium Theaterpädagogik in Lingen (2017-2024), Mitwirkung in über 20 Theaterstücken, dreimal Regie, einmal Choreografie",
@@ -217,7 +217,7 @@ export default function UeberUnsPage() {
     {
       id: 15,
       name: "Wiktoria Lessing",
-      birthYear: 1993,
+      birthYear: 1992,
       birthQuarter: 2, // Basierend auf aktuellem Alter 31
       profession: "Theateraktivität: seit 2008",
       experience: "Amateurtheater, deutsch & englisch, Mitwirkung in 7 Produktionen",
