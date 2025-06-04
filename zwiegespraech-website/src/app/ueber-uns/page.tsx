@@ -5,11 +5,37 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 
+// Utility-Funktion für Altersberechnung basierend auf Jahr und Quartal
+function calculateAgeFromQuarter(birthYear: number, birthQuarter: 1 | 2 | 3 | 4): number {
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth() + 1; // 0-11 -> 1-12
+  
+  // Quartal zu Monat umrechnen (Mitte des Quartals für genauere Berechnung)
+  const quarterToMonth = {
+    1: 2,  // Q1: Februar (Mitte von Jan-Mar)
+    2: 5,  // Q2: Mai (Mitte von Apr-Jun)
+    3: 8,  // Q3: August (Mitte von Jul-Sep)
+    4: 11  // Q4: November (Mitte von Okt-Dez)
+  };
+  
+  const birthMonth = quarterToMonth[birthQuarter];
+  let age = currentYear - birthYear;
+  
+  // Wenn das Geburtsdatum dieses Jahr noch nicht erreicht wurde
+  if (currentMonth < birthMonth) {
+    age--;
+  }
+  
+  return age;
+}
+
 // TypeScript Interface für die Teammitglieder
 interface TeamMember {
   id: number;
   name: string;
-  age: number;
+  birthYear: number;
+  birthQuarter: 1 | 2 | 3 | 4;
   profession: string;
   theatreQuote: string;
   zwiegespraechQuote: string;
@@ -22,12 +48,13 @@ export default function UeberUnsPage() {
   // State for team member modal - mit korrekter Typisierung
   const [activeTeamMember, setActiveTeamMember] = useState<TeamMember | null>(null);
 
-  // Team members data - simplified structure to avoid compilation issues
+  // Team members data - Alle Mitglieder mit Geburtsjahr und Quartal
   const teamMembers: TeamMember[] = [
     {
       id: 1,
       name: "Babett Wittekind",
-      age: 59,
+      birthYear: 1965,
+      birthQuarter: 2, // Basierend auf aktuellem Alter 59
       profession: "Dipl.-Ingenieurin Lebensmitteltechnologie",
       theatreQuote: "Theater ist für mich ein wichtiger Bestandteil des Lebens, da es den Horizont erweitert. Da es leider immer weniger gibt, braucht es mehr Vielfalt, um aktuelle Themen verarbeiten zu können.",
       zwiegespraechQuote: "",
@@ -36,7 +63,8 @@ export default function UeberUnsPage() {
     {
       id: 2,
       name: "Bastian Bühler",
-      age: 30,
+      birthYear: 1994,
+      birthQuarter: 3, // Basierend auf aktuellem Alter 30
       profession: "Theateraktivität: seit 2009",
       experience: "Amateurtheater, Mitwirkung in über 30 Theaterstücken, zweimal Co-Regie",
       role: "Schauspiel",
@@ -44,11 +72,11 @@ export default function UeberUnsPage() {
       zwiegespraechQuote: `Es ist die Möglichkeit, mit verschiedenen Charakteren, welche alle ihre individuellen Stärken mitbringen, etwas Eigenes aufzubauen. Also bedeutet es letztlich, die eigene Vision von Theater nach vorne zu bringen. Vieles, was im Amateurtheater gelebt und gemacht wird, sollte meines Erachtens neu und anders bearbeitet werden, um für diesen Bereich und die Menschen, die darin wirken möchten, das Beste möglich zu machen. Zw[i:]g[ə]spräch soll perspektivisch ein Ort werden, an dem sich kreative Menschen auch kreativ entfalten dürfen.`,
       imageSrc: "/images/team/bastian.jpg"
     },
-    // Alle weiteren Teammitglieder bleiben unverändert...
     {
       id: 3,
       name: "Claus Wiegand",
-      age: 61,
+      birthYear: 1963,
+      birthQuarter: 1, // Basierend auf aktuellem Alter 61
       profession: "seit 1977 Möbel- & Bauschreiner",
       experience: "einwöchige Arbeit für den WDR für eine Fernsehsendung, Komplettaustattungen von Gaststätten / Hotels",
       role: "Bühnenbild, Requisite",
@@ -59,7 +87,8 @@ export default function UeberUnsPage() {
     {
       id: 4,
       name: "Hannah Hemmelmann",
-      age: 29,
+      birthYear: 1995,
+      birthQuarter: 3, // Basierend auf aktuellem Alter 29
       profession: "seit 2019 HR Business Partnerin",
       experience: "Wirtschaftsrecht und Personalarbeit",
       role: "Vereinsstruktur, Kostüm, Audio",
@@ -70,7 +99,8 @@ export default function UeberUnsPage() {
     {
       id: 5,
       name: "Julian Thiele",
-      age: 34,
+      birthYear: 1990,
+      birthQuarter: 2, // Basierend auf aktuellem Alter 34
       profession: "seit 2014 Erzieher",
       experience: "Amateurtheater, Improtheater",
       role: "Kassenwart",
@@ -81,7 +111,8 @@ export default function UeberUnsPage() {
     {
       id: 6,
       name: "Kevin Nolting",
-      age: 34,
+      birthYear: 1990,
+      birthQuarter: 4, // Basierend auf aktuellem Alter 34
       profession: "Theateraktivität: seit 2007",
       experience: "Amateurtheater, Mitwirkung in über 30 Theaterstücken, sechsmal Bühnenbildkonzept",
       role: "Schauspiel",
@@ -92,7 +123,8 @@ export default function UeberUnsPage() {
     {
       id: 7,
       name: "Leonie Stratmann / Leo Will",
-      age: 33,
+      birthYear: 1991,
+      birthQuarter: 2, // Basierend auf aktuellem Alter 33
       profession: "Theateraktivität: seit 1998",
       experience: "Mitwirkung in über 30 Theaterstücken, überwiegend Amateurtheater, erst als Darstellerin (Schauspiel/Gesang/Tanz), später als Spielleiterin/Co-Regisseurin u. A. am Staatstheater Hannover, Pavillontheater, VHS Hannover, FHM Bielefeld, Studium Theaterwissenschaft",
       role: "Gesangstraining, Arrangements",
@@ -103,7 +135,8 @@ export default function UeberUnsPage() {
     {
       id: 8,
       name: "Luis Lessing",
-      age: 30,
+      birthYear: 1993,
+      birthQuarter: 2, // Basierend auf aktuellem Alter 30
       profession: "Theateraktivität: seit 1993",
       experience: "Amateurtheater, Mitwirkung in über 20 Theaterstücken",
       role: "Schauspiel",
@@ -114,7 +147,8 @@ export default function UeberUnsPage() {
     {
       id: 9,
       name: "Mandy Schöneborn-Madaj",
-      age: 38,
+      birthYear: 1986,
+      birthQuarter: 3, // Basierend auf aktuellem Alter 38
       profession: "IT-System Managerin",
       experience: "seit 2008",
       role: "Mitwirkung bei der Webseitenerstellung und Pflege",
@@ -125,7 +159,8 @@ export default function UeberUnsPage() {
     {
       id: 10,
       name: "Marion Bühler",
-      age: 62,
+      birthYear: 1962,
+      birthQuarter: 1, // Basierend auf aktuellem Alter 62
       profession: "Theateraktivität: seit 2007",
       experience: "Amateurtheater, Mitwirkung in über 30 Produktionen",
       role: "Bühnenmalerei, Fotografie",
@@ -136,7 +171,8 @@ export default function UeberUnsPage() {
     {
       id: 11,
       name: "Pauline Sebastian",
-      age: 24,
+      birthYear: 2000,
+      birthQuarter: 2, // Basierend auf aktuellem Alter 24
       profession: "Theateraktivität: 2010, 2018",
       experience: "Amateurtheater, Mitwirkung in 2 Produktionen",
       role: "Souffleuse",
@@ -147,7 +183,8 @@ export default function UeberUnsPage() {
     {
       id: 12,
       name: "Richard Laustroer",
-      age: 37,
+      birthYear: 1987,
+      birthQuarter: 4, // Basierend auf aktuellem Alter 37
       profession: "Theateraktivität: seit 1999",
       experience: "Amateurtheater/Freilichtbühne, Mitwirkung in 25 Theaterstücken",
       role: "Fotografie",
@@ -158,7 +195,8 @@ export default function UeberUnsPage() {
     {
       id: 13,
       name: "Sebastian Narhofer",
-      age: 30,
+      birthYear: 1994,
+      birthQuarter: 4, // Basierend auf aktuellem Alter 30
       profession: "Theateraktivität: seit 2009",
       experience: "Amateurtheater, Studium Theaterpädagogik in Lingen (2017-2024), Mitwirkung in über 20 Theaterstücken, dreimal Regie, einmal Choreografie",
       role: "Regie",
@@ -169,7 +207,8 @@ export default function UeberUnsPage() {
     {
       id: 14,
       name: "Udo Jesel",
-      age: 64,
+      birthYear: 1960,
+      birthQuarter: 3, // Basierend auf aktuellem Alter 64
       profession: "Dipl.-Ingenieur Lebensmitteltechnologie",
       theatreQuote: "Theater bedeutet für mich, auf andere Gedanken zu kommen und Perspektiven zu erweitern. Leider ist es in Zeiten der neuen Medien immer weniger gefragt.",
       zwiegespraechQuote: "",
@@ -178,7 +217,8 @@ export default function UeberUnsPage() {
     {
       id: 15,
       name: "Wiktoria Lessing",
-      age: 31,
+      birthYear: 1993,
+      birthQuarter: 2, // Basierend auf aktuellem Alter 31
       profession: "Theateraktivität: seit 2008",
       experience: "Amateurtheater, deutsch & englisch, Mitwirkung in 7 Produktionen",
       role: "Souffleuse",
@@ -189,7 +229,8 @@ export default function UeberUnsPage() {
     {
       id: 16,
       name: "Yannick Dommermuth-Krüger",
-      age: 31,
+      birthYear: 1993,
+      birthQuarter: 1, // Basierend auf aktuellem Alter 31
       profession: "Theateraktivität: seit 2010",
       experience: "Amateurtheater, Komparsenrollen in ein paar Filmen, 20 Theaterstücken, Bühnenbau bei 10 Stücken, 2x Regie-Arbeit und 4x im technischen Bereich",
       role: "Schauspiel und Bühnenbau",
@@ -216,36 +257,41 @@ export default function UeberUnsPage() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.map((member) => (
-                <div 
-                  key={member.id} 
-                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
-                  onClick={() => setActiveTeamMember(member)}
-                >
-                  <div className="relative pt-[125%]">
-                    <img 
-                      src={member.imageSrc} 
-                      alt={member.name} 
-                      className="absolute top-0 left-0 w-full h-full object-cover"
-                    />
+              {teamMembers.map((member) => {
+                // Alter automatisch berechnen
+                const currentAge = calculateAgeFromQuarter(member.birthYear, member.birthQuarter);
+                
+                return (
+                  <div 
+                    key={member.id} 
+                    className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                    onClick={() => setActiveTeamMember(member)}
+                  >
+                    <div className="relative pt-[125%]">
+                      <img 
+                        src={member.imageSrc} 
+                        alt={member.name} 
+                        className="absolute top-0 left-0 w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                      <p className="text-gray-600 mb-2">Alter: {currentAge}</p>
+                      {member.role && (
+                        <p className="text-gray-700 mb-1">Funktion: {member.role}</p>
+                      )}
+                      <p className="mt-3 text-gray-700 overflow-hidden text-ellipsis line-clamp-3">
+                        {member.theatreQuote.substring(0, 150)}...
+                      </p>
+                      <button 
+                        className="mt-4 text-gray-600 hover:text-gray-900 font-medium"
+                      >
+                        Mehr erfahren
+                      </button>
+                    </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                    <p className="text-gray-600 mb-2">Alter: {member.age}</p>
-                    {member.role && (
-                      <p className="text-gray-700 mb-1">Funktion: {member.role}</p>
-                    )}
-                    <p className="mt-3 text-gray-700 overflow-hidden text-ellipsis line-clamp-3">
-                      {member.theatreQuote.substring(0, 150)}...
-                    </p>
-                    <button 
-                      className="mt-4 text-gray-600 hover:text-gray-900 font-medium"
-                    >
-                      Mehr erfahren
-                    </button>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
@@ -325,7 +371,9 @@ export default function UeberUnsPage() {
                 
                 <div className="md:w-2/3">
                   <h3 className="text-2xl font-bold mb-2">{activeTeamMember.name}</h3>
-                  <p className="text-gray-600 mb-4">Alter: {activeTeamMember.age}</p>
+                  <p className="text-gray-600 mb-4">
+                    Alter: {calculateAgeFromQuarter(activeTeamMember.birthYear, activeTeamMember.birthQuarter)}
+                  </p>
                   
                   {activeTeamMember.profession && (
                     <p className="mb-2"><span className="font-medium">Beruf/Erfahrung:</span> {activeTeamMember.profession}</p>
