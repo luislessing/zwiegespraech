@@ -43,7 +43,6 @@ interface TeamMember {
   experience?: string;
   role?: string;
 }
-
 export default function UeberUnsPage() {
   // State for team member modal - mit korrekter Typisierung
   const [activeTeamMember, setActiveTeamMember] = useState<TeamMember | null>(null);
@@ -195,7 +194,7 @@ export default function UeberUnsPage() {
     {
       id: 13,
       name: "Sebastian Narhofer",
-      birthYear: 1993,
+      birthYear: 199,
       birthQuarter: 4, // Basierend auf aktuellem Alter 30
       profession: "Theateraktivität: seit 2009",
       experience: "Amateurtheater, Studium Theaterpädagogik in Lingen (2017-2024), Mitwirkung in über 20 Theaterstücken, dreimal Regie, einmal Choreografie",
@@ -239,6 +238,37 @@ export default function UeberUnsPage() {
       imageSrc: "/images/team/yannick.jpeg"
     }
   ];
+
+  const closeModal = () => {
+    setActiveTeamMember(null);
+  };
+
+  // Touch handling for swipe to close
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const startY = e.touches[0].clientY;
+    const startX = e.touches[0].clientX;
+    
+    const handleTouchMove = (moveEvent: TouchEvent) => {
+      const currentY = moveEvent.touches[0].clientY;
+      const currentX = moveEvent.touches[0].clientX;
+      const diffY = currentY - startY;
+      const diffX = Math.abs(currentX - startX);
+      
+      // Only close on vertical swipe down (not horizontal swipes)
+      if (diffY > 100 && diffX < 50) {
+        closeModal();
+        document.removeEventListener('touchmove', handleTouchMove);
+      }
+    };
+    
+    const handleTouchEnd = () => {
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
+    };
+    
+    document.addEventListener('touchmove', handleTouchMove);
+    document.addEventListener('touchend', handleTouchEnd);
+  };
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-900 flex flex-col">
@@ -348,14 +378,29 @@ export default function UeberUnsPage() {
 
       {/* Team Member Modal */}
       {activeTeamMember && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              closeModal();
+            }
+          }}
+        >
+          <div 
+            className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
+            onTouchStart={handleTouchStart}
+          >
+            {/* Swipe indicator bar for mobile */}
+            <div className="md:hidden w-12 h-1 bg-gray-300 rounded-full mx-auto mt-2 mb-2"></div>
+            
             <div className="p-6 relative">
+              {/* Larger close button */}
               <button 
-                onClick={() => setActiveTeamMember(null)}
-                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+                onClick={closeModal}
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 p-2 hover:bg-gray-100 rounded-full transition-colors"
+                aria-label="Schließen"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
@@ -394,9 +439,24 @@ export default function UeberUnsPage() {
                     {activeTeamMember.zwiegespraechQuote && (
                       <>
                         <p className="font-medium mb-2">Zum Thema Zw[i:]g[ə]spräch:</p>
-                        <p className="italic">{activeTeamMember.zwiegespraechQuote}</p>
+                        <p className="italic mb-6">{activeTeamMember.zwiegespraechQuote}</p>
                       </>
                     )}
+                  </div>
+                  
+                  {/* Close Button */}
+                  <div className="flex justify-center mt-6">
+                    <button 
+                      onClick={closeModal}
+                      className="bg-gray-900 hover:bg-gray-800 text-white font-medium py-3 px-8 rounded-md transition-colors"
+                    >
+                      Schließen
+                    </button>
+                  </div>
+                  
+                  {/* Swipe indicator for mobile */}
+                  <div className="md:hidden text-center mt-4 text-gray-500 text-sm">
+                    <p>Nach unten wischen zum Schließen</p>
                   </div>
                 </div>
               </div>
