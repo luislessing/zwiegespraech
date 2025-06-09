@@ -1,11 +1,39 @@
 "use client";
 
+import SEO from '@/components/SEO';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 export default function KontaktPage() {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Zwiegespräch Theater",
+    "telephone": "+49-157-37000047",
+    "email": "zwiegespraechtheater@gmx.de",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Paderborn",
+      "addressRegion": "Nordrhein-Westfalen",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "51.7189",
+      "longitude": "8.7575"
+    }
+  };
+
   return (
+    <>
+      <SEO
+        title="Kontakt - Zwiegespräch Theater Paderborn"
+        description="Kontaktieren Sie das Schauspielkollektiv Zwiegespräch. Anfragen für Aufführungen, Termine und Kooperationen. Theater aus Paderborn."
+        canonical="/kontakt/"
+        keywords="Theater Kontakt Paderborn, Schauspielkollektiv anfragen, Aufführungen buchen"
+        schema={localBusinessSchema}
+      />
     <div className="min-h-screen bg-gray-100 text-gray-900 flex flex-col">
       <Header />
       
@@ -108,5 +136,6 @@ export default function KontaktPage() {
       <Footer />
       <ScrollToTopButton />
     </div>
+    </>
   );
 }

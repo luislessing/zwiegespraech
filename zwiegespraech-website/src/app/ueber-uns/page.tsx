@@ -1,5 +1,6 @@
 "use client";
 
+import SEO from '@/components/SEO';
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -43,7 +44,27 @@ interface TeamMember {
   experience?: string;
   role?: string;
 }
+
 export default function UeberUnsPage() {
+  // SEO Schema für die Organisation
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zwiegespräch Theater",
+    "description": "Schauspielkollektiv mit Fokus auf experimentelles Theater und Dialog",
+    "url": "https://zwiegespräch-theater.de/ueber-uns/",
+    "foundingDate": "2024",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Paderborn, Deutschland"
+    },
+    "numberOfEmployees": "25",
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Deutsche Theaterlandschaft"
+    }
+  };
+
   // State for team member modal - mit korrekter Typisierung
   const [activeTeamMember, setActiveTeamMember] = useState<TeamMember | null>(null);
 
@@ -68,7 +89,7 @@ export default function UeberUnsPage() {
       profession: "Schauspiel",
       experience: "2007, Amateurtheater, Mitwirkung in ca. 25 Stücken",
       theatreQuote: "Theater ist für mich eine Welt, die voller Geschichten, Emotionen und Kreativität ist. Theater ist eine Einladung, in andere Welten einzutauchen – egal, ob aktiv auf der Bühne oder als Zuschauende.",
-      zwiegespraechQuote: "Sag mal was zum Thema „Zwiegespräch“: Wenn ich an Zwiegespräch als Verein denke, stelle ich mir einen Ort vor, an dem Menschen zusammenkommen, um andere Perspektiven zu erleben und sich darüber auszutauschen.",
+      zwiegespraechQuote: "Wenn ich an Zwiegespräch als Verein denke, stelle ich mir einen Ort vor, an dem Menschen zusammenkommen, um andere Perspektiven zu erleben und sich darüber auszutauschen.",
       imageSrc: "/images/team/female.jpg"
     },
     {
@@ -374,202 +395,212 @@ export default function UeberUnsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900 flex flex-col">
-      <Header />
+    <>
+      <SEO 
+        title="Über uns - Das Schauspielkollektiv Zwiegespräch" 
+        description="Lernen Sie das Schauspielkollektiv Zwiegespräch kennen. 25 Theatermacher aus Paderborn und Umgebung. Experimentelles Theater und Dialog im Fokus." 
+        canonical="/ueber-uns/" 
+        keywords="Schauspielkollektiv Team, Theater Paderborn Mitglieder, experimentelles Theater NRW, Zwiegespräch Theater"
+        schema={organizationSchema} 
+      />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gray-900 text-white">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">Über [ˈʊ]ns</h1>
-          <h2 className="text-3xl font-normal mb-8 text-center">Wer verbirgt sich hinter dem Schauspielkollektiv Zw[i:]g[ə]spräch?</h2>
-        </div>
-      </section>
-      
-      <main className="flex-grow">
-        {/* Team Member Grid */}
-        <section className="py-16 bg-white">
+      <div className="min-h-screen bg-gray-100 text-gray-900 flex flex-col">
+        <Header />
+        
+        {/* Hero Section */}
+        <section className="pt-32 pb-16 bg-gray-900 text-white">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.map((member) => {
-                // Alter automatisch berechnen
-                const currentAge = calculateAgeFromQuarter(member.birthYear, member.birthQuarter);
-                
-                return (
-                  <div 
-                    key={member.id} 
-                    className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
-                    onClick={() => setActiveTeamMember(member)}
-                  >
-                    <div className="relative pt-[125%]">
-                      <img 
-                        src={member.imageSrc} 
-                        alt={member.name} 
-                        className="absolute top-0 left-0 w-full h-full object-cover"
-                      />
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">Über [ˈʊ]ns</h1>
+            <h2 className="text-3xl font-normal mb-8 text-center">Wer verbirgt sich hinter dem Schauspielkollektiv Zw[i:]g[ə]spräch?</h2>
+          </div>
+        </section>
+        
+        <main className="flex-grow">
+          {/* Team Member Grid */}
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {teamMembers.map((member) => {
+                  // Alter automatisch berechnen
+                  const currentAge = calculateAgeFromQuarter(member.birthYear, member.birthQuarter);
+                  
+                  return (
+                    <div 
+                      key={member.id} 
+                      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                      onClick={() => setActiveTeamMember(member)}
+                    >
+                      <div className="relative pt-[125%]">
+                        <img 
+                          src={member.imageSrc} 
+                          alt={member.name} 
+                          className="absolute top-0 left-0 w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                        <p className="text-gray-600 mb-2">Alter: {currentAge}</p>
+                        {member.role && (
+                          <p className="text-gray-700 mb-1">Funktion: {member.role}</p>
+                        )}
+                        <p className="mt-3 text-gray-700 overflow-hidden text-ellipsis line-clamp-3">
+                          {member.theatreQuote.substring(0, 150)}...
+                        </p>
+                        <button 
+                          className="mt-4 text-gray-600 hover:text-gray-900 font-medium"
+                        >
+                          Mehr erfahren
+                        </button>
+                      </div>
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                      <p className="text-gray-600 mb-2">Alter: {currentAge}</p>
-                      {member.role && (
-                        <p className="text-gray-700 mb-1">Funktion: {member.role}</p>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+
+          {/* About the Group Section */}
+          <section className="py-16 bg-gray-100">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="text-3xl font-bold mb-8">Warum eigentlich Zw[i:]g[ə]spräch?</h2>
+                <div className="prose prose-lg max-w-none">
+                  <p className="mb-4">
+                    <strong>Definition: Gespräch unter zwei Parteien</strong>
+                  </p>
+                  <p className="mb-6">
+                    Egal, ob man es nur mit sich führt, mit jemandem oder mehreren, passt es 
+                    dazu, wie wir Theater verstehen: das Sehen, das Erleben, der Austausch 
+                    und die Reflexion. Dazu sind natürlich alle eingeladen: Seien es die 
+                    Mitwirkenden, die Unterstützenden, die Zuschauenden oder die, die wir 
+                    noch gar nicht kennen, eben wie bei einem guten Gespräch.
+                  </p>
+                  <p className="mb-6">
+                    Genauso verstehen wir das Zw[i:]g[ə]spräch nicht nur als einmaliges Projekt, 
+                    sondern als eine langfristige Entwicklung, deren Grenzen wir selbst noch
+                    gar nicht einsehen können und möchten - auch wie bei einem gutem 
+                    Gespräch. Das alles soll Kern unseres Schauspielkollektivs sein.
+                  </p>
+                  <p>
+                    Also kommt ran, wir haben zu sprechen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Photo Credits */}
+          <section className="py-12 bg-white">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto text-center">
+                <p className="text-lg">
+                  Vielen Dank an{' '}
+                  <a href="https://www.instagram.com/marionbuehler_art/" target="_blank" rel="noreferrer noopener" className="text-gray-600 hover:underline">
+                    Marion Bühler
+                  </a>{' '}
+                  und{' '}
+                  <a href="https://www.instagram.com/kreuzundquerfotografie/" target="_blank" rel="noreferrer noopener" className="text-gray-600 hover:underline">
+                    Richard Laustroer
+                  </a>{' '}
+                  für das Bereitstellen der Fotos.
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        {/* Team Member Modal */}
+        {activeTeamMember && (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) {
+                closeModal();
+              }
+            }}
+          >
+            <div 
+              className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
+              onTouchStart={handleTouchStart}
+            >
+              {/* Swipe indicator bar for mobile */}
+              <div className="md:hidden w-12 h-1 bg-gray-300 rounded-full mx-auto mt-2 mb-2"></div>
+              
+              <div className="p-6 relative">
+                {/* Larger close button */}
+                <button 
+                  onClick={closeModal}
+                  className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 p-2 hover:bg-gray-100 rounded-full transition-colors"
+                  aria-label="Schließen"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                
+                <div className="flex flex-col md:flex-row gap-6">
+                  <div className="md:w-1/3">
+                    <img 
+                      src={activeTeamMember.imageSrc} 
+                      alt={activeTeamMember.name} 
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                  
+                  <div className="md:w-2/3">
+                    <h3 className="text-2xl font-bold mb-2">{activeTeamMember.name}</h3>
+                    <p className="text-gray-600 mb-4">
+                      Alter: {calculateAgeFromQuarter(activeTeamMember.birthYear, activeTeamMember.birthQuarter)}
+                    </p>
+                    
+                    {activeTeamMember.profession && (
+                      <p className="mb-2"><span className="font-medium">Beruf/Erfahrung:</span> {activeTeamMember.profession}</p>
+                    )}
+                    
+                    {activeTeamMember.experience && (
+                      <p className="mb-2"><span className="font-medium">Details:</span> {activeTeamMember.experience}</p>
+                    )}
+                    
+                    {activeTeamMember.role && (
+                      <p className="mb-4"><span className="font-medium">Funktion bei Zw[i:]g[ə]spräch:</span> {activeTeamMember.role}</p>
+                    )}
+                    
+                    <div className="mt-4">
+                      <p className="font-medium mb-2">Zum Thema Theater:</p>
+                      <p className="italic mb-4">{activeTeamMember.theatreQuote}</p>
+                      
+                      {activeTeamMember.zwiegespraechQuote && (
+                        <>
+                          <p className="font-medium mb-2">Zum Thema Zw[i:]g[ə]spräch:</p>
+                          <p className="italic mb-6">{activeTeamMember.zwiegespraechQuote}</p>
+                        </>
                       )}
-                      <p className="mt-3 text-gray-700 overflow-hidden text-ellipsis line-clamp-3">
-                        {member.theatreQuote.substring(0, 150)}...
-                      </p>
+                    </div>
+                    
+                    {/* Close Button */}
+                    <div className="flex justify-center mt-6">
                       <button 
-                        className="mt-4 text-gray-600 hover:text-gray-900 font-medium"
+                        onClick={closeModal}
+                        className="bg-gray-900 hover:bg-gray-800 text-white font-medium py-3 px-8 rounded-md transition-colors"
                       >
-                        Mehr erfahren
+                        Schließen
                       </button>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* About the Group Section */}
-        <section className="py-16 bg-gray-100">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8">Warum eigentlich Zw[i:]g[ə]spräch?</h2>
-              <div className="prose prose-lg max-w-none">
-                <p className="mb-4">
-                  <strong>Definition: Gespräch unter zwei Parteien</strong>
-                </p>
-                <p className="mb-6">
-                  Egal, ob man es nur mit sich führt, mit jemandem oder mehreren, passt es 
-                  dazu, wie wir Theater verstehen: das Sehen, das Erleben, der Austausch 
-                  und die Reflexion. Dazu sind natürlich alle eingeladen: Seien es die 
-                  Mitwirkenden, die Unterstützenden, die Zuschauenden oder die, die wir 
-                  noch gar nicht kennen, eben wie bei einem guten Gespräch.
-                </p>
-                <p className="mb-6">
-                  Genauso verstehen wir das Zw[i:]g[ə]spräch nicht nur als einmaliges Projekt, 
-                  sondern als eine langfristige Entwicklung, deren Grenzen wir selbst noch
-                  gar nicht einsehen können und möchten - auch wie bei einem gutem 
-                  Gespräch. Das alles soll Kern unseres Schauspielkollektivs sein.
-                </p>
-                <p>
-                  Also kommt ran, wir haben zu sprechen.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Photo Credits */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-lg">
-                Vielen Dank an{' '}
-                <a href="https://www.instagram.com/marionbuehler_art/" target="_blank" rel="noreferrer noopener" className="text-gray-600 hover:underline">
-                  Marion Bühler
-                </a>{' '}
-                und{' '}
-                <a href="https://www.instagram.com/kreuzundquerfotografie/" target="_blank" rel="noreferrer noopener" className="text-gray-600 hover:underline">
-                  Richard Laustroer
-                </a>{' '}
-                für das Bereitstellen der Fotos.
-              </p>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      {/* Team Member Modal */}
-      {activeTeamMember && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
-          onClick={(e) => {
-            if (e.target === e.currentTarget) {
-              closeModal();
-            }
-          }}
-        >
-          <div 
-            className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
-            onTouchStart={handleTouchStart}
-          >
-            {/* Swipe indicator bar for mobile */}
-            <div className="md:hidden w-12 h-1 bg-gray-300 rounded-full mx-auto mt-2 mb-2"></div>
-            
-            <div className="p-6 relative">
-              {/* Larger close button */}
-              <button 
-                onClick={closeModal}
-                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 p-2 hover:bg-gray-100 rounded-full transition-colors"
-                aria-label="Schließen"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-              
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/3">
-                  <img 
-                    src={activeTeamMember.imageSrc} 
-                    alt={activeTeamMember.name} 
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-                
-                <div className="md:w-2/3">
-                  <h3 className="text-2xl font-bold mb-2">{activeTeamMember.name}</h3>
-                  <p className="text-gray-600 mb-4">
-                    Alter: {calculateAgeFromQuarter(activeTeamMember.birthYear, activeTeamMember.birthQuarter)}
-                  </p>
-                  
-                  {activeTeamMember.profession && (
-                    <p className="mb-2"><span className="font-medium">Beruf/Erfahrung:</span> {activeTeamMember.profession}</p>
-                  )}
-                  
-                  {activeTeamMember.experience && (
-                    <p className="mb-2"><span className="font-medium">Details:</span> {activeTeamMember.experience}</p>
-                  )}
-                  
-                  {activeTeamMember.role && (
-                    <p className="mb-4"><span className="font-medium">Funktion bei Zw[i:]g[ə]spräch:</span> {activeTeamMember.role}</p>
-                  )}
-                  
-                  <div className="mt-4">
-                    <p className="font-medium mb-2">Zum Thema Theater:</p>
-                    <p className="italic mb-4">{activeTeamMember.theatreQuote}</p>
                     
-                    {activeTeamMember.zwiegespraechQuote && (
-                      <>
-                        <p className="font-medium mb-2">Zum Thema Zw[i:]g[ə]spräch:</p>
-                        <p className="italic mb-6">{activeTeamMember.zwiegespraechQuote}</p>
-                      </>
-                    )}
-                  </div>
-                  
-                  {/* Close Button */}
-                  <div className="flex justify-center mt-6">
-                    <button 
-                      onClick={closeModal}
-                      className="bg-gray-900 hover:bg-gray-800 text-white font-medium py-3 px-8 rounded-md transition-colors"
-                    >
-                      Schließen
-                    </button>
-                  </div>
-                  
-                  {/* Swipe indicator for mobile */}
-                  <div className="md:hidden text-center mt-4 text-gray-500 text-sm">
-                    <p>Nach unten wischen zum Schließen</p>
+                    {/* Swipe indicator for mobile */}
+                    <div className="md:hidden text-center mt-4 text-gray-500 text-sm">
+                      <p>Nach unten wischen zum Schließen</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <Footer />
-      <ScrollToTopButton />
-    </div>
+        <Footer />
+        <ScrollToTopButton />
+      </div>
+    </>
   );
 }
