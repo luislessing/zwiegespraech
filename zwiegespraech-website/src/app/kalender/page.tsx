@@ -244,19 +244,6 @@ export default function KalenderPage() {
           </div>
         </section>
 
-        {/* Tickets Section */}
-        <section className="py-16 bg-gray-100">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Tickets</h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Tickets für unsere Aufführungen können Sie online reservieren oder direkt an der Abendkasse erwerben.
-            </p>
-            <a href="/tickets" className="bg-gray-900 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-md transition-colors">
-              Tickets reservieren
-            </a>
-          </div>
-        </section>
-
         {/* Photo Credits */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">

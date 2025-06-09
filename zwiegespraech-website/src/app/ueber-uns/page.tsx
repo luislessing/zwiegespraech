@@ -49,8 +49,51 @@ export default function UeberUnsPage() {
 
   // Team members data - Alle Mitglieder mit Geburtsjahr und Quartal
   const teamMembers: TeamMember[] = [
-    {
+         {
       id: 1,
+      name: "Adrean Thomas Grübner",
+      birthYear: 2003,
+      birthQuarter: 3,
+      profession: "Schauspiel",
+      experience: "Amatuertheater an Freilichtbühnen seit 2021, Mitwirkung an Kurzfilmen im Bereich Prävention. (Schauspiel und Drehbuch)",
+      theatreQuote: "Theater ist der Spiegel unserer Gesellschaft. Beim Theater ist nahezu alles möglich, Realität und Fantasie verschmelzen. Theater ist für mich der perfekte Ausgleich zum meist eintönigen Leben. Den Zuschauern einen Moment zu beiten, indem sie in eine andere Welt eintauchen. Auf der Bühne entfaltet sich das Leben in all seiner Vielfalt.",
+      zwiegespraechQuote: "Zwiegespräch ist für mich eine tolle Möglichkeit mich mit Menschen zusammenzuschließen, die alle für Kultur und Theater brennen und dieses mit viel Engagement auf ein neues Level bringen und vor allem damit andere Menschen zu begeistern.",
+      imageSrc: "/images/team/adrean.jpeg"
+    },
+       {
+      id: 2,
+      name: "Alessa Bühler",
+      birthYear: 1996,
+      birthQuarter: 2,
+      profession: "Schauspiel",
+      experience: "2007, Amateurtheater, Mitwirkung in ca. 25 Stücken",
+      theatreQuote: "Theater ist für mich eine Welt, die voller Geschichten, Emotionen und Kreativität ist. Theater ist eine Einladung, in andere Welten einzutauchen – egal, ob aktiv auf der Bühne oder als Zuschauende.",
+      zwiegespraechQuote: "Sag mal was zum Thema „Zwiegespräch“: Wenn ich an Zwiegespräch als Verein denke, stelle ich mir einen Ort vor, an dem Menschen zusammenkommen, um andere Perspektiven zu erleben und sich darüber auszutauschen.",
+      imageSrc: "/images/team/female.jpg"
+    },
+    {
+      id: 3,
+      name: "Alexander Bühler",
+      birthYear: 1962,
+      birthQuarter: 1,
+      imageSrc: "/images/team/alexander.jpeg",
+      profession: '',
+      theatreQuote: '',
+      zwiegespraechQuote: ''
+    },
+         {
+      id: 4,
+      name: "Aruna Gnanavel",
+      birthYear:2025, 
+      birthQuarter:4, 
+      profession: "",
+      experience: "",
+      theatreQuote: "",
+      zwiegespraechQuote: "",
+      imageSrc: "/images/team/male.jpg"
+    },
+    {
+      id: 5,
       name: "Babett Wittekind",
       birthYear: 1965,
       birthQuarter: 2, // Basierend auf aktuellem Alter 59
@@ -60,7 +103,7 @@ export default function UeberUnsPage() {
       imageSrc: "/images/team/babett.jpg"
     },
     {
-      id: 2,
+      id: 6,
       name: "Bastian Bühler",
       birthYear: 1994,
       birthQuarter: 3, // Basierend auf aktuellem Alter 30
@@ -72,7 +115,7 @@ export default function UeberUnsPage() {
       imageSrc: "/images/team/bastian.jpg"
     },
     {
-      id: 3,
+      id: 7,
       name: "Claus Wiegand",
       birthYear: 1963,
       birthQuarter: 1, // Basierend auf aktuellem Alter 61
@@ -83,8 +126,20 @@ export default function UeberUnsPage() {
       zwiegespraechQuote: `Prinzipiell bedeutet es für mich, das unterschiedliche Menschen miteinander kommunizieren und zusammen etwas kreieren. Außerdem ist es für mich eine neue Herausforderung, was ich abseits meiner normalen Arbeit bauen kann. Ich freue mich, das fast Unmögliche möglich zu machen. Es ist auch eine Herausforderung für uns als Gruppe, weshalb ich gespannt bin, was wir in Zukunft noch alles machen werden.`,
       imageSrc: "/images/team/claus.jpg"
     },
+        {
+      id: 8,
+      name: "Erika Osterloh",
+      birthYear: 1932,
+      birthQuarter: 1, 
+      profession: "",
+      experience: "",
+      role: "",
+      theatreQuote: ``,
+      zwiegespraechQuote: ``,
+      imageSrc: "/images/team/erika.jpeg"
+    },
     {
-      id: 4,
+      id: 9,
       name: "Hannah Hemmelmann",
       birthYear: 1995,
       birthQuarter: 3, // Basierend auf aktuellem Alter 29
@@ -95,8 +150,20 @@ export default function UeberUnsPage() {
       zwiegespraechQuote: "Zw[i:]g[ə]spräch ist für mich ein Zusammenschluss von tollen Menschen, die für das Theater, die Kunst und die Kultur brennen, weswegen ich mich freue, ein Teil davon zu sein und sie tatkräftig zu unterstützen.",
       imageSrc: "/images/team/hannah.jpg"
     },
+        {
+      id: 10,
+      name: "Hendrik Oberlag",
+      birthYear: 1991,
+      birthQuarter: 3, 
+      profession: "Audioproduktionen",
+      experience: "Mitwirkung in der Theater-AG",
+      role: "Vereinsstruktur, Kostüm, Audio",
+      theatreQuote: "Bis jetzt haben das immer nur die anderen gemacht, jetzt möchte ich es auch mal.",
+      zwiegespraechQuote: "Ich freue mich darauf, Kultur zu fördern und auf Spaß vorm Mikrofon.",
+      imageSrc: "/images/team/male.jpg"
+    },
     {
-      id: 5,
+      id: 11,
       name: "Julian Thiele",
       birthYear: 1990,
       birthQuarter: 2, // Basierend auf aktuellem Alter 34
@@ -108,7 +175,7 @@ export default function UeberUnsPage() {
       imageSrc: "/images/team/julian.jpg"
     },
     {
-      id: 6,
+      id: 12,
       name: "Kevin Nolting",
       birthYear: 1990,
       birthQuarter: 4, // Basierend auf aktuellem Alter 34
@@ -120,7 +187,7 @@ export default function UeberUnsPage() {
       imageSrc: "/images/team/kevin.jpg"
     },
     {
-      id: 7,
+      id: 13,
       name: "Leonie Stratmann / Leo Will",
       birthYear: 1991,
       birthQuarter: 2, // Basierend auf aktuellem Alter 33
@@ -131,8 +198,20 @@ export default function UeberUnsPage() {
       zwiegespraechQuote: "Dieser Name ist auf so vielen Ebenen Programm im Theater. Ich denke da z.B. an das imaginierte Zwiegespräch zwischen Schauspieler*in und Rolle bei der Vorbereitung, das reale Zwiegespräch zwischen Regie und Schauspiel in den Proben, das empfundene Zwiegespräch zwischen Darstellenden und Zuschauenden und dann natürlich auch das innere Zwiegespräch bei der Verarbeitung dessen, was im Theater erlebt wurde.",
       imageSrc: "/images/team/leonie.jpg"
     },
+        {
+      id: 14,
+      name: "Lisa-Marie Wiegand",
+      birthYear: 1999,
+      birthQuarter: 1, 
+      profession: "seit 2014",
+      experience: "Amateurtheater, Mitwirkung in über 10 Stücken",
+      role: "Schauspiel, Finanzen",
+      theatreQuote: "",
+      zwiegespraechQuote: "",
+      imageSrc: "/images/team/female.jpg"
+    },
     {
-      id: 8,
+      id: 15,
       name: "Luis Lessing",
       birthYear: 1993,
       birthQuarter: 2, // Basierend auf aktuellem Alter 30
@@ -144,7 +223,7 @@ export default function UeberUnsPage() {
       imageSrc: "/images/team/luis.jpg"
     },
     {
-      id: 9,
+      id: 16,
       name: "Mandy Schöneborn-Madaj",
       birthYear: 1986,
       birthQuarter: 3, // Basierend auf aktuellem Alter 38
@@ -156,7 +235,7 @@ export default function UeberUnsPage() {
       imageSrc: "/images/team/mandy.jpeg"
     },
     {
-      id: 10,
+      id: 17,
       name: "Marion Bühler",
       birthYear: 1962,
       birthQuarter: 1, // Basierend auf aktuellem Alter 62
@@ -167,8 +246,20 @@ export default function UeberUnsPage() {
       zwiegespraechQuote: `Ich mag das Wort, weil darin so viel steckt. Es hat Potenzial für das, was ich mir jetzt nur erträumen kann. Ich glaube nämlich, dass es ein Projekt ist, das gut wird, weil man sich intensiv Gedanken darum macht.`,
       imageSrc: "/images/team/marion.jpg"
     },
+        {
+      id: 18,
+      name: "Nele Schwark",
+      birthYear: 1998,
+      birthQuarter: 2, 
+      profession: "",
+      experience: "",
+      role: "",
+      theatreQuote: ``,
+      zwiegespraechQuote: ``,
+      imageSrc: "/images/team/female.jpg"
+    },
     {
-      id: 11,
+      id: 19,
       name: "Pauline Sebastian",
       birthYear: 2000,
       birthQuarter: 2, // Basierend auf aktuellem Alter 24
@@ -180,7 +271,7 @@ export default function UeberUnsPage() {
       imageSrc: "/images/team/pauline.jpg"
     },
     {
-      id: 12,
+      id: 20,
       name: "Richard Laustroer",
       birthYear: 1987,
       birthQuarter: 4, // Basierend auf aktuellem Alter 37
@@ -192,9 +283,9 @@ export default function UeberUnsPage() {
       imageSrc: "/images/team/richard.jpg"
     },
     {
-      id: 13,
+      id: 21,
       name: "Sebastian Narhofer",
-      birthYear: 199,
+      birthYear: 1993,
       birthQuarter: 4, // Basierend auf aktuellem Alter 30
       profession: "Theateraktivität: seit 2009",
       experience: "Amateurtheater, Studium Theaterpädagogik in Lingen (2017-2024), Mitwirkung in über 20 Theaterstücken, dreimal Regie, einmal Choreografie",
@@ -203,8 +294,20 @@ export default function UeberUnsPage() {
       zwiegespraechQuote: `Es bedeutet für mich die Auseinandersetzung mit Themen der Gesellschaft auf einer künstlerischen und performativen Ebene. Meine Vision reicht von Formaten des Schauspiels über Audiowalks bis hin zu Theaterexpert*innen des Alltags.`,
       imageSrc: "/images/team/sebastian.jpg"
     },
+        {
+      id: 22,
+      name: "Tim Kreikenbaum",
+      birthYear: 1995,
+      birthQuarter: 1, // Basierend auf aktuellem Alter 30
+      profession: "",
+      experience: "Mitwirkung in einem Stück der Theater AG des Leibniz-Gymnasiums",
+      role: "Schauspiel",
+      theatreQuote: `Theater ist für mich ein Ort, an dem alles möglich ist, ein Ort, der Raum für Momente bietet, egal wie klein, um an Bedeutung zu gewinnen. Es ist die Magie zwischenmenschlicher und künstlerischer Interaktion und birgt eine ganz besondere Faszination.`,
+      zwiegespraechQuote: `Zwiegespräch bedeutet für mich eine Botschaft, die von der Bühne ans Publikum getragen wird und über die man noch lange nachdenken kann – ähnlich einem Gespräch mit einem guten Freund.`,
+      imageSrc: "/images/team/male.jpg"
+    },
     {
-      id: 14,
+      id: 23,
       name: "Udo Jesel",
       birthYear: 1960,
       birthQuarter: 3, // Basierend auf aktuellem Alter 64
@@ -214,7 +317,7 @@ export default function UeberUnsPage() {
       imageSrc: "/images/team/udo.jpg"
     },
     {
-      id: 15,
+      id: 24,
       name: "Wiktoria Lessing",
       birthYear: 1992,
       birthQuarter: 2, // Basierend auf aktuellem Alter 31
@@ -226,7 +329,7 @@ export default function UeberUnsPage() {
       imageSrc: "/images/team/wiktoria.jpg"
     },
     {
-      id: 16,
+      id: 25,
       name: "Yannick Dommermuth-Krüger",
       birthYear: 1993,
       birthQuarter: 1, // Basierend auf aktuellem Alter 31
