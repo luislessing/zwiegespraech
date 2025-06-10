@@ -10,7 +10,7 @@ export default function HomePage() {
     "@type": "TheaterGroup",
     "name": "Zwiegespräch Theater",
     "alternateName": "Schauspielkollektiv Zwiegespräch",
-    "description": "Experimentelles Schauspielkollektiv aus Paderborn. Dialog, Reflexion und Theater als Kunstform.",
+    "description": "Zwiegespräch Theater - Experimentelles Schauspielkollektiv aus Paderborn. Erleben Sie Dialog, Reflexion und moderne Theaterkunst. Aktuelle Produktionen und Aufführungen in NRW.",
     "url": "https://zwiegespräch-theater.de",
     "sameAs": [
       "https://www.instagram.com/zwiegespraech_theater",
