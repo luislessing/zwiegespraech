@@ -79,7 +79,7 @@ export default function UeberUnsPage() {
       experience: "Amatuertheater an Freilichtbühnen seit 2021, Mitwirkung an Kurzfilmen im Bereich Prävention. (Schauspiel und Drehbuch)",
       theatreQuote: "Theater ist der Spiegel unserer Gesellschaft. Beim Theater ist nahezu alles möglich, Realität und Fantasie verschmelzen. Theater ist für mich der perfekte Ausgleich zum meist eintönigen Leben. Den Zuschauern einen Moment zu beiten, indem sie in eine andere Welt eintauchen. Auf der Bühne entfaltet sich das Leben in all seiner Vielfalt.",
       zwiegespraechQuote: "Zwiegespräch ist für mich eine tolle Möglichkeit mich mit Menschen zusammenzuschließen, die alle für Kultur und Theater brennen und dieses mit viel Engagement auf ein neues Level bringen und vor allem damit andere Menschen zu begeistern.",
-      imageSrc: "/images/team/adrean.jpeg"
+      imageSrc: "/images/team/adrean.webp"
     },
        {
       id: 2,
@@ -90,14 +90,14 @@ export default function UeberUnsPage() {
       experience: "2007, Amateurtheater, Mitwirkung in ca. 25 Stücken",
       theatreQuote: "Theater ist für mich eine Welt, die voller Geschichten, Emotionen und Kreativität ist. Theater ist eine Einladung, in andere Welten einzutauchen – egal, ob aktiv auf der Bühne oder als Zuschauende.",
       zwiegespraechQuote: "Wenn ich an Zwiegespräch als Verein denke, stelle ich mir einen Ort vor, an dem Menschen zusammenkommen, um andere Perspektiven zu erleben und sich darüber auszutauschen.",
-      imageSrc: "/images/team/female.jpg"
+      imageSrc: "/images/team/female.webp"
     },
     {
       id: 3,
       name: "Alexander Bühler",
       birthYear: 1962,
       birthQuarter: 1,
-      imageSrc: "/images/team/alexander.jpeg",
+      imageSrc: "/images/team/alexander.webp",
       profession: '',
       theatreQuote: '',
       zwiegespraechQuote: ''
@@ -111,7 +111,7 @@ export default function UeberUnsPage() {
       experience: "",
       theatreQuote: "",
       zwiegespraechQuote: "",
-      imageSrc: "/images/team/male.jpg"
+      imageSrc: "/images/team/male.webp"
     },
     {
       id: 5,
@@ -121,7 +121,7 @@ export default function UeberUnsPage() {
       profession: "Dipl.-Ingenieurin Lebensmitteltechnologie",
       theatreQuote: "Theater ist für mich ein wichtiger Bestandteil des Lebens, da es den Horizont erweitert. Da es leider immer weniger gibt, braucht es mehr Vielfalt, um aktuelle Themen verarbeiten zu können.",
       zwiegespraechQuote: "",
-      imageSrc: "/images/team/babett.jpg"
+      imageSrc: "/images/team/babett.webp"
     },
     {
       id: 6,
@@ -133,7 +133,7 @@ export default function UeberUnsPage() {
       role: "Schauspiel",
       theatreQuote: `Theater bedeutet für mich, die eigenen Grenzen in vielfältigen Bereichen auszuloten und jedes mal, Stück um Stück, über genau diese Grenzen hinauszugehen und in allen Bereichen besser zu werden. Mir ist es wichtig, etwas auf die Bühne zu bringen, was nicht nur den Leuten auf und hinter der Bühne den Zusammenhalt bringt, sondern auch für die Menschen ist, die uns gegenübersitzen, die wir bei dem abholen, was sie brauchen. Sei es etwas zum Nachdenken, zum Lachen oder zum Weinen.`,
       zwiegespraechQuote: `Es ist die Möglichkeit, mit verschiedenen Charakteren, welche alle ihre individuellen Stärken mitbringen, etwas Eigenes aufzubauen. Also bedeutet es letztlich, die eigene Vision von Theater nach vorne zu bringen. Vieles, was im Amateurtheater gelebt und gemacht wird, sollte meines Erachtens neu und anders bearbeitet werden, um für diesen Bereich und die Menschen, die darin wirken möchten, das Beste möglich zu machen. Zw[i:]g[ə]spräch soll perspektivisch ein Ort werden, an dem sich kreative Menschen auch kreativ entfalten dürfen.`,
-      imageSrc: "/images/team/bastian.jpg"
+      imageSrc: "/images/team/bastian.webp"
     },
     {
       id: 7,
@@ -145,7 +145,7 @@ export default function UeberUnsPage() {
       role: "Bühnenbild, Requisite",
       theatreQuote: `Theater bedeutet für mich das gespielte Leben, das eine angenehme Ablenkung vom normalen Leben ist. Vor allem mag ich, dass alles beim Theater live gespielt wird. Daher ist es für mich anspruchsvoller als ein Film, bei dem man eine Szene immer wiederholen kann.`,
       zwiegespraechQuote: `Prinzipiell bedeutet es für mich, das unterschiedliche Menschen miteinander kommunizieren und zusammen etwas kreieren. Außerdem ist es für mich eine neue Herausforderung, was ich abseits meiner normalen Arbeit bauen kann. Ich freue mich, das fast Unmögliche möglich zu machen. Es ist auch eine Herausforderung für uns als Gruppe, weshalb ich gespannt bin, was wir in Zukunft noch alles machen werden.`,
-      imageSrc: "/images/team/claus.jpg"
+      imageSrc: "/images/team/claus.webp"
     },
         {
       id: 8,
@@ -157,7 +157,7 @@ export default function UeberUnsPage() {
       role: "",
       theatreQuote: ``,
       zwiegespraechQuote: ``,
-      imageSrc: "/images/team/erika.jpeg"
+      imageSrc: "/images/team/erika.webp"
     },
     {
       id: 9,
@@ -169,7 +169,7 @@ export default function UeberUnsPage() {
       role: "Vereinsstruktur, Kostüm, Audio",
       theatreQuote: "Das Theater begleitet mich schon seit meiner Kindheit als begeisterte Zuschauerin. Ich selbst stand bisher nur in der Schulzeit in einer BigBand auf der Bühne.",
       zwiegespraechQuote: "Zw[i:]g[ə]spräch ist für mich ein Zusammenschluss von tollen Menschen, die für das Theater, die Kunst und die Kultur brennen, weswegen ich mich freue, ein Teil davon zu sein und sie tatkräftig zu unterstützen.",
-      imageSrc: "/images/team/hannah.jpg"
+      imageSrc: "/images/team/hannah.webp"
     },
         {
       id: 10,
@@ -181,7 +181,7 @@ export default function UeberUnsPage() {
       role: "Vereinsstruktur, Kostüm, Audio",
       theatreQuote: "Bis jetzt haben das immer nur die anderen gemacht, jetzt möchte ich es auch mal.",
       zwiegespraechQuote: "Ich freue mich darauf, Kultur zu fördern und auf Spaß vorm Mikrofon.",
-      imageSrc: "/images/team/male.jpg"
+      imageSrc: "/images/team/male.webp"
     },
     {
       id: 11,
@@ -193,7 +193,7 @@ export default function UeberUnsPage() {
       role: "Kassenwart",
       theatreQuote: "Ich liebe am Theater, dass ich meinen Fokus im Schauspiel selbst lenken kann und so z. B. die Kunst der Statisten zu würdigen.",
       zwiegespraechQuote: "Ganz im Sinne des Wortes bedeutet es für mich, einen dritten Ort zu finden, an dem ganz viele kreative und engagierte Menschen sich austauschen können.",
-      imageSrc: "/images/team/julian.jpg"
+      imageSrc: "/images/team/julian.webp"
     },
     {
       id: 12,
@@ -205,7 +205,7 @@ export default function UeberUnsPage() {
       role: "Schauspiel",
       theatreQuote: `Theater ist eine Chance, Blickwinkel durch Rollen einzunehmen, die man im Alltag nicht hat. Hierfür kann man an eigene Erfahrungen anknüpfen, aber auch komplett Neues im Dialog erarbeiten, was unglaublich spannend ist. Außerdem ist jedes Stück etwas ganz Besonderes und Einmaliges, entweder durch eine komplexe Rolle, ein besonderes Requisit oder ein ansprechendes Bühnenbild. Diese Bestandteile schaffen nur zusammen eine gute Authentizität.`,
       zwiegespraechQuote: `Einerseits sollte Zw[i:]g[ə]spräch eine Erfahrung werden, über die man generell mit anderen spricht, ein Dialog von Theaterfreunden mit Theaterfreunden, egal auf welcher Seite des Vorhangs man sich befindet. Andererseits freue ich mich auf einen Ort, an dem man etwas mit dem Ensemble erarbeitet und sich im Dialog kreativ beeinflusst, um zusammen Ideen und Konzepte zu entwickeln, die die Ideenvielfalt einer Person übersteigt.`,
-      imageSrc: "/images/team/kevin.jpg"
+      imageSrc: "/images/team/kevin.webp"
     },
     {
       id: 13,
@@ -217,7 +217,7 @@ export default function UeberUnsPage() {
       role: "Gesangstraining, Arrangements",
       theatreQuote: "Theater bietet die Gelegenheit, Perspektiven zu wechseln, Szenarien buchstäblich durchzuspielen, Themen und Emotionen eine Bühne zu geben, zu unterhalten, zu überspitzen, zu veranschaulichen, zu hinterfragen. Und all das findet nicht vor den Bildschirmen statt, sondern wird in einem Raum voller echter Menschen erlebt, der gleichzeitig ein geschützter Raum ist – der Raum der Kunst.",
       zwiegespraechQuote: "Dieser Name ist auf so vielen Ebenen Programm im Theater. Ich denke da z.B. an das imaginierte Zwiegespräch zwischen Schauspieler*in und Rolle bei der Vorbereitung, das reale Zwiegespräch zwischen Regie und Schauspiel in den Proben, das empfundene Zwiegespräch zwischen Darstellenden und Zuschauenden und dann natürlich auch das innere Zwiegespräch bei der Verarbeitung dessen, was im Theater erlebt wurde.",
-      imageSrc: "/images/team/leonie.jpg"
+      imageSrc: "/images/team/leonie.webp"
     },
         {
       id: 14,
@@ -229,7 +229,7 @@ export default function UeberUnsPage() {
       role: "Schauspiel, Finanzen",
       theatreQuote: "",
       zwiegespraechQuote: "",
-      imageSrc: "/images/team/female.jpg"
+      imageSrc: "/images/team/female.webp"
     },
     {
       id: 15,
@@ -241,7 +241,7 @@ export default function UeberUnsPage() {
       role: "Schauspiel",
       theatreQuote: `Theater bedeutet für mich so viel mehr als nur eine Bühne mit Schauspielern. Es ist ein Raum voller Emotionen und Geschichten, ein Raum, in dem ich aus den verschiedensten Rollen eine Verbindung zum Publikum aufbauen kann.`,
       zwiegespraechQuote: `Zw[i:]g[ə]spräch ist ein bisschen wie das Gefühl, nach Hause zu kommen. Nach langer Pause kann endlich wieder Theater gespielt werden. Hier können wir gemeinsam und auf Augenhöhe Geschichten sowie Inszenierungen gestalten und großartige Dinge auf die Beine stellen.`,
-      imageSrc: "/images/team/luis.jpg"
+      imageSrc: "/images/team/luis.webp"
     },
     {
       id: 16,
@@ -253,7 +253,7 @@ export default function UeberUnsPage() {
       role: "Mitwirkung bei der Webseitenerstellung und Pflege",
       theatreQuote: `Theater bedeutet für mich eine wunderbare Welt voller Geschichten, Emotionen und Kreativität. Es ist eine Kunstform, die es ermöglicht, in verschiedene Rollen und Welten einzutauchen und bietet eine einzigartige Möglichkeit, menschliche Erfahrungen und Gefühle zu erkunden.`,
       zwiegespraechQuote: `Für mich bedeutet ein Zwiegespräch eine intime und direkte Form der Kommunikation, bei der zwei Personen offen und ehrlich miteinander sprechen. Es ermöglicht die Perspektive des anderen zu erfassen.`,
-      imageSrc: "/images/team/mandy.jpeg"
+      imageSrc: "/images/team/mandy.webp"
     },
     {
       id: 17,
@@ -265,7 +265,7 @@ export default function UeberUnsPage() {
       role: "Bühnenmalerei, Fotografie",
       theatreQuote: `Ich liebe es, an einem Theaterstück mitzuarbeiten, um eine gute Produktion zu ermöglichen. Daher bin ich sehr motiviert, mit dem zu helfen, was ich an Fähigkeiten mitbringe. Am Theater fasziniert mich das Live-Event, für das Menschen ihre Kreativität einbringen.`,
       zwiegespraechQuote: `Ich mag das Wort, weil darin so viel steckt. Es hat Potenzial für das, was ich mir jetzt nur erträumen kann. Ich glaube nämlich, dass es ein Projekt ist, das gut wird, weil man sich intensiv Gedanken darum macht.`,
-      imageSrc: "/images/team/marion.jpg"
+      imageSrc: "/images/team/marion.webp"
     },
         {
       id: 18,
@@ -277,7 +277,7 @@ export default function UeberUnsPage() {
       role: "",
       theatreQuote: ``,
       zwiegespraechQuote: ``,
-      imageSrc: "/images/team/female.jpg"
+      imageSrc: "/images/team/female.webp"
     },
     {
       id: 19,
@@ -289,7 +289,7 @@ export default function UeberUnsPage() {
       role: "Souffleuse",
       theatreQuote: `Theater sind Emotionen und kreative und gesellschaftliche Gedanken, die ich durch Geschichten in Dialogform erfahren kann. Zudem liebe ich Kreativität und den Aspekt des Geschichtenerzählens.`,
       zwiegespraechQuote: `Zw[i:]g[ə]spräch ist für mich der neue Zugang zu einem kreativen Feld, der mir vielleicht hilft zu erkennen, wohin die Reise weitergeht.`,
-      imageSrc: "/images/team/pauline.jpg"
+      imageSrc: "/images/team/pauline.webp"
     },
     {
       id: 20,
@@ -301,7 +301,7 @@ export default function UeberUnsPage() {
       role: "Fotografie",
       theatreQuote: `Theater bietet die Möglichkeit, sich komplett auf andere Rollen einzulassen bzw. neue Arten zu finden, um sich zu verwirklichen. Es ist ein „Mannschaftssport" und verbindet viele Generationen (von jung bis alt). Es ist einfach ein geniales Hobby.`,
       zwiegespraechQuote: `Vor allem freue ich mich auf neue Ideen, neue Leute und viele kreative gemeinsame Stunden.`,
-      imageSrc: "/images/team/richard.jpg"
+      imageSrc: "/images/team/richard.webp"
     },
     {
       id: 21,
@@ -313,7 +313,7 @@ export default function UeberUnsPage() {
       role: "Regie",
       theatreQuote: `Theater ist für mich die Auseinandersetzung mit Rollen, auch mit denen, die ich im Alltag nicht einnehmen kann oder will. Mich faszinieren Beziehungen, die nach meiner Auffassung die Basis des Theaters darstellen.`,
       zwiegespraechQuote: `Es bedeutet für mich die Auseinandersetzung mit Themen der Gesellschaft auf einer künstlerischen und performativen Ebene. Meine Vision reicht von Formaten des Schauspiels über Audiowalks bis hin zu Theaterexpert*innen des Alltags.`,
-      imageSrc: "/images/team/sebastian.jpg"
+      imageSrc: "/images/team/sebastian.webp"
     },
         {
       id: 22,
@@ -325,7 +325,7 @@ export default function UeberUnsPage() {
       role: "Schauspiel",
       theatreQuote: `Theater ist für mich ein Ort, an dem alles möglich ist, ein Ort, der Raum für Momente bietet, egal wie klein, um an Bedeutung zu gewinnen. Es ist die Magie zwischenmenschlicher und künstlerischer Interaktion und birgt eine ganz besondere Faszination.`,
       zwiegespraechQuote: `Zwiegespräch bedeutet für mich eine Botschaft, die von der Bühne ans Publikum getragen wird und über die man noch lange nachdenken kann – ähnlich einem Gespräch mit einem guten Freund.`,
-      imageSrc: "/images/team/male.jpg"
+      imageSrc: "/images/team/male.webp"
     },
     {
       id: 23,
@@ -335,7 +335,7 @@ export default function UeberUnsPage() {
       profession: "Dipl.-Ingenieur Lebensmitteltechnologie",
       theatreQuote: "Theater bedeutet für mich, auf andere Gedanken zu kommen und Perspektiven zu erweitern. Leider ist es in Zeiten der neuen Medien immer weniger gefragt.",
       zwiegespraechQuote: "",
-      imageSrc: "/images/team/udo.jpg"
+      imageSrc: "/images/team/udo.webp"
     },
     {
       id: 24,
@@ -347,7 +347,7 @@ export default function UeberUnsPage() {
       role: "Souffleuse",
       theatreQuote: `Theater ist für mich Emotionen. Es bedeutet, Charaktereigenschaften, die man vielleicht auch selber in sich trägt, voll ausleben und ausspielen zu dürfen, ohne Angst vor Konsequenzen haben zu müssen.`,
       zwiegespraechQuote: `Zw[i:]g[ə]spräch ist für mich nach längerer Pause ein neuer Zugang zum Theater und ein neuer Ansatz, dass Theater zu leben.`,
-      imageSrc: "/images/team/wiktoria.jpg"
+      imageSrc: "/images/team/wiktoria.webp"
     },
     {
       id: 25,
@@ -359,7 +359,7 @@ export default function UeberUnsPage() {
       role: "Schauspiel und Bühnenbau",
       theatreQuote: "Theater ist eine große Leidenschaft, die ich 2010 durch Schulfreunde entdeckt habe. Seitdem lässt es mich nicht mehr los. Durch die vielen Möglichkeiten, die ein Theaterverein bietet, wird es nie langweilig und es gibt sehr viel Abwechslung durch die verschiedenen Bereiche.",
       zwiegespraechQuote: "Neue kulturelle Bereiche, besonders im Bereich Theater, sind wichtig. Daher freue ich mich über jede Möglichkeit, Menschen ein Hobby oder Unterhaltung zu schenken.",
-      imageSrc: "/images/team/yannick.jpeg"
+      imageSrc: "/images/team/yannick.webp"
     }
   ];
 

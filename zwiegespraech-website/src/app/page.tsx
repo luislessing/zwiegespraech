@@ -51,7 +51,7 @@ export default function HomePage() {
         description="Schauspielkollektiv Zwiegespräch aus Paderborn. Experimentelles Theater, Dialog und Reflexion. Aktuelle Produktionen und Aufführungstermine."
         keywords="Theater Paderborn, Schauspielkollektiv, Zwiegespräch, experimentelles Theater, Aufführungen, Kultur Paderborn"
         canonical="/"
-        ogImage="/images/hero-theater.jpg"
+        ogImage="/images/hero-theater.webp"
         schema={theaterSchema}
       />
       
@@ -93,21 +93,21 @@ export default function HomePage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow bg-white">
                   <img 
-                    src="/images/Kunst/impression5.jpeg" 
+                    src="/images/Kunst/impression5.webp" 
                     alt="Theaterszene - Zwiegespräch Aufführung" 
                     className="w-full h-64 object-cover" 
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow bg-white">
                   <img 
-                    src="/images/Kunst/impression4.jpeg" 
+                    src="/images/Kunst/impression4.webp" 
                     alt="Schauspielkollektiv Zwiegespräch bei Probe" 
                     className="w-full h-64 object-cover" 
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow bg-white">
                   <img 
-                    src="/images/Kunst/impression3.jpeg" 
+                    src="/images/Kunst/impression3.webp" 
                     alt="Experimentelles Theater Paderborn" 
                     className="w-full h-64 object-cover" 
                   />

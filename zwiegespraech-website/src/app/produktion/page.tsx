@@ -13,30 +13,30 @@ export default function ProduktionPage() {
       name: "Serge",
       actor: "Kevin Nolting",
       quote: '„Für mich ist es nicht weiß. Wenn ich sage, für mich, dann meine ich objektiv. Objektiv gesehen ist es nicht weiß. […] Sogar rot ist drin."',
-      images: ["/images/Kunst/Serge.jpeg", "/images/Kunst/Serge2.jpeg"]
+      images: ["/images/Kunst/Serge.webp", "/images/Kunst/Serge2.webp"]
     },
     {
       id: 2,
       name: "Marc",
       actor: "Bastian Bühler",
       quote: '„Ein Gedanke hinter sowas! … Was du siehst, ist zwar eine Scheiße, doch sei unbesorgt, sei unbesorgt, es steckt ein Gedanke dahinter!"',
-      images: ["/images/Kunst/Marc.jpg", "/images/Kunst/Marc2.jpeg"]
+      images: ["/images/Kunst/Marc.webp", "/images/Kunst/Marc2.webp"]
     },
     {
       id: 3,
       name: "Yvan",
       actor: "Luis Lessing",
       quote: '„Ihr [wisst], [dass] ich weinen kann… Ich kann hier auf der Stelle anfangen zu weinen … Ich bin übrigens nicht weit davon entfernt."',
-      images: ["/images/Kunst/yvan.jpeg", "/images/Kunst/yvan2.jpeg"]
+      images: ["/images/Kunst/yvan.webp", "/images/Kunst/yvan2.webp"]
     }
   ];
 
   const galleryImages = [
-    "/images/Kunst/impression1.jpeg",
-    "/images/Kunst/impression2.jpeg",
-    "/images/Kunst/impression3.jpeg",
-    "/images/Kunst/impression4.jpeg",
-    "/images/Kunst/impression5.jpeg"
+    "/images/Kunst/impression1.webp",
+    "/images/Kunst/impression2.webp",
+    "/images/Kunst/impression3.webp",
+    "/images/Kunst/impression4.webp",
+    "/images/Kunst/impression5.webp"
   ];
 
   return (
