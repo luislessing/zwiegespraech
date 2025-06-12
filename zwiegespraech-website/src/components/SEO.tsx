@@ -7,6 +7,7 @@ interface SEOProps {
   ogImage?: string;
   keywords?: string;
   schema?: object;
+  appleIcon?: string;
 }
 
 export default function SEO({ 
@@ -15,7 +16,8 @@ export default function SEO({
   canonical, 
   ogImage = '/images/og-default.jpg',
   keywords,
-  schema 
+  schema,
+  appleIcon = '/apple-touch-icon.png'
 }: SEOProps) {
   const siteUrl = 'https://zwiegespräch-theater.de';
   const fullTitle = title.includes('Zwiegespräch') ? title : `${title} | Zwiegespräch Theater`;
