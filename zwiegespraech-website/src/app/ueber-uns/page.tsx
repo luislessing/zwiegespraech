@@ -105,8 +105,8 @@ export default function UeberUnsPage() {
          {
       id: 4,
       name: "Aruna Gnanavel",
-      birthYear:2025, 
-      birthQuarter:4, 
+      birthYear:1995, 
+      birthQuarter:2, 
       profession: "",
       experience: "",
       theatreQuote: "",
@@ -116,8 +116,8 @@ export default function UeberUnsPage() {
     {
       id: 5,
       name: "Babett Wittekind",
-      birthYear: 1965,
-      birthQuarter: 2, // Basierend auf aktuellem Alter 59
+      birthYear: 1964,
+      birthQuarter: 4,
       profession: "Dipl.-Ingenieurin Lebensmitteltechnologie",
       theatreQuote: "Theater ist für mich ein wichtiger Bestandteil des Lebens, da es den Horizont erweitert. Da es leider immer weniger gibt, braucht es mehr Vielfalt, um aktuelle Themen verarbeiten zu können.",
       zwiegespraechQuote: "",
@@ -126,8 +126,8 @@ export default function UeberUnsPage() {
     {
       id: 6,
       name: "Bastian Bühler",
-      birthYear: 1994,
-      birthQuarter: 3, // Basierend auf aktuellem Alter 30
+      birthYear: 1993,
+      birthQuarter: 4,
       profession: "Theateraktivität: seit 2009",
       experience: "Amateurtheater, Mitwirkung in über 30 Theaterstücken, zweimal Co-Regie",
       role: "Schauspiel",
@@ -138,8 +138,8 @@ export default function UeberUnsPage() {
     {
       id: 7,
       name: "Claus Wiegand",
-      birthYear: 1963,
-      birthQuarter: 1, // Basierend auf aktuellem Alter 61
+      birthYear: 1962,
+      birthQuarter: 2, // Basierend auf aktuellem Alter 61
       profession: "seit 1977 Möbel- & Bauschreiner",
       experience: "einwöchige Arbeit für den WDR für eine Fernsehsendung, Komplettaustattungen von Gaststätten / Hotels",
       role: "Bühnenbild, Requisite",
@@ -163,7 +163,7 @@ export default function UeberUnsPage() {
       id: 9,
       name: "Hannah Hemmelmann",
       birthYear: 1995,
-      birthQuarter: 3, // Basierend auf aktuellem Alter 29
+      birthQuarter: 1, // Basierend auf aktuellem Alter 29
       profession: "seit 2019 HR Business Partnerin",
       experience: "Wirtschaftsrecht und Personalarbeit",
       role: "Vereinsstruktur, Kostüm, Audio",
@@ -198,8 +198,8 @@ export default function UeberUnsPage() {
     {
       id: 12,
       name: "Kevin Nolting",
-      birthYear: 1990,
-      birthQuarter: 4, // Basierend auf aktuellem Alter 34
+      birthYear: 1989,
+      birthQuarter: 3, // Basierend auf aktuellem Alter 34
       profession: "Theateraktivität: seit 2007",
       experience: "Amateurtheater, Mitwirkung in über 30 Theaterstücken, sechsmal Bühnenbildkonzept",
       role: "Schauspiel",
@@ -211,7 +211,7 @@ export default function UeberUnsPage() {
       id: 13,
       name: "Leonie Stratmann / Leo Will",
       birthYear: 1991,
-      birthQuarter: 2, // Basierend auf aktuellem Alter 33
+      birthQuarter: 1, // Basierend auf aktuellem Alter 33
       profession: "Theateraktivität: seit 1998",
       experience: "Mitwirkung in über 30 Theaterstücken, überwiegend Amateurtheater, erst als Darstellerin (Schauspiel/Gesang/Tanz), später als Spielleiterin/Co-Regisseurin u. A. am Staatstheater Hannover, Pavillontheater, VHS Hannover, FHM Bielefeld, Studium Theaterwissenschaft",
       role: "Gesangstraining, Arrangements",
@@ -247,7 +247,7 @@ export default function UeberUnsPage() {
       id: 16,
       name: "Mandy Schöneborn-Madaj",
       birthYear: 1986,
-      birthQuarter: 3, // Basierend auf aktuellem Alter 38
+      birthQuarter: 2, // Basierend auf aktuellem Alter 38
       profession: "IT-System Managerin",
       experience: "seit 2008",
       role: "Mitwirkung bei der Webseitenerstellung und Pflege",
@@ -283,7 +283,7 @@ export default function UeberUnsPage() {
       id: 19,
       name: "Pauline Sebastian",
       birthYear: 2000,
-      birthQuarter: 2, // Basierend auf aktuellem Alter 24
+      birthQuarter: 1, // Basierend auf aktuellem Alter 24
       profession: "Theateraktivität: 2010, 2018",
       experience: "Amateurtheater, Mitwirkung in 2 Produktionen",
       role: "Souffleuse",
@@ -295,7 +295,7 @@ export default function UeberUnsPage() {
       id: 20,
       name: "Richard Laustroer",
       birthYear: 1987,
-      birthQuarter: 4, // Basierend auf aktuellem Alter 37
+      birthQuarter: 1, // Basierend auf aktuellem Alter 37
       profession: "Theateraktivität: seit 1999",
       experience: "Amateurtheater/Freilichtbühne, Mitwirkung in 25 Theaterstücken",
       role: "Fotografie",
@@ -307,7 +307,7 @@ export default function UeberUnsPage() {
       id: 21,
       name: "Sebastian Narhofer",
       birthYear: 1993,
-      birthQuarter: 4, // Basierend auf aktuellem Alter 30
+      birthQuarter: 2, // Basierend auf aktuellem Alter 30
       profession: "Theateraktivität: seit 2009",
       experience: "Amateurtheater, Studium Theaterpädagogik in Lingen (2017-2024), Mitwirkung in über 20 Theaterstücken, dreimal Regie, einmal Choreografie",
       role: "Regie",
@@ -331,7 +331,7 @@ export default function UeberUnsPage() {
       id: 23,
       name: "Udo Jesel",
       birthYear: 1960,
-      birthQuarter: 3, // Basierend auf aktuellem Alter 64
+      birthQuarter: 2, // Basierend auf aktuellem Alter 64
       profession: "Dipl.-Ingenieur Lebensmitteltechnologie",
       theatreQuote: "Theater bedeutet für mich, auf andere Gedanken zu kommen und Perspektiven zu erweitern. Leider ist es in Zeiten der neuen Medien immer weniger gefragt.",
       zwiegespraechQuote: "",
@@ -341,7 +341,7 @@ export default function UeberUnsPage() {
       id: 24,
       name: "Wiktoria Lessing",
       birthYear: 1992,
-      birthQuarter: 2, // Basierend auf aktuellem Alter 31
+      birthQuarter: 3, // Basierend auf aktuellem Alter 31
       profession: "Theateraktivität: seit 2008",
       experience: "Amateurtheater, deutsch & englisch, Mitwirkung in 7 Produktionen",
       role: "Souffleuse",
