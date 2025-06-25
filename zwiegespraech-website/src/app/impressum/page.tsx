@@ -37,7 +37,7 @@ export default function ImpressumPage() {
               <div className="mb-6 bg-gray-50 p-4 rounded-md">
                 <p><strong>Name:</strong> Bastian Bühler</p>
                 <p><strong>Adresse:</strong> Liegnitzer Straße 15, 33098 Paderborn</p>
-                <p><strong>E-Mail:</strong> <a href="mailto:zwiegespraechtheater@gmx.de" className="text-gray-600 hover:underline">zwiegespraechtheater@gmx.de</a></p>
+                <p><strong>E-Mail:</strong> <a href="mailto:info@zwiegespraech-theater.de" className="text-gray-600 hover:underline">info@zwiegespraech-theater.de</a></p>
                 <p><strong>Telefon:</strong> 015737000047</p>
               </div>
 

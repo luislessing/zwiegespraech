@@ -90,8 +90,8 @@ export default function KontaktPage() {
                   <ul className="space-y-3">
                     <li className="flex">
                       <span className="font-medium mr-2">E-Mail:</span>
-                      <a href="mailto:zwiegespraechtheater@gmx.de" className="text-gray-600 hover:underline">
-                        zwiegespraechtheater@gmx.de
+                      <a href="mailto:info@zwiegespraech-theater.de" className="text-gray-600 hover:underline">
+                        info@zwiegespraech-theater.de
                       </a>
                     </li>
                   </ul>
