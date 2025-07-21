@@ -23,7 +23,7 @@ export default function Footer() {
               <a href="https://www.youtube.com/@Zwiegespraech_theater" className="hover:text-gray-400 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Youtube size={24} />
               </a>
-              <a href="mailto:zwiegespraechtheater@gmx.de" className="hover:text-gray-400 transition-colors">
+              <a href="mailto:info@zwiegespraechtheater.de" className="hover:text-gray-400 transition-colors">
                 <Mail size={24} />
               </a>
             </div>

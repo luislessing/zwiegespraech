@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     // ESLint während des Builds ignorieren
     ignoreDuringBuilds: true,
   },
-  output: 'export',
+  // output: 'export', // Auskommentiert, um API-Routen zu ermöglichen
   // andere Konfigurationsoptionen hier...
 };
 
