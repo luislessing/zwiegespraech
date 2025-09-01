@@ -37,7 +37,7 @@ export default function ImpressumPage() {
               <div className="mb-6 bg-gray-50 p-4 rounded-md">
                 <p><strong>Name:</strong> Bastian Bühler</p>
                 <p><strong>Adresse:</strong> Liegnitzer Straße 15, 33098 Paderborn</p>
-                <p><strong>E-Mail:</strong> <a href="mailto:info@zwiegespraech-theater.de" className="text-gray-600 hover:underline">info@zwiegespraech-theater.de</a></p>
+                <p><strong>E-Mail:</strong> <a href="mailto:vorstand@zwiegespraech-theater.de" className="text-gray-600 hover:underline">vorstand@zwiegespraech-theater.de</a></p>
                 <p><strong>Telefon:</strong> 015737000047</p>
               </div>
 
@@ -50,10 +50,18 @@ export default function ImpressumPage() {
               <h2 className="text-2xl font-bold mb-4">4. Journalistische oder redaktionelle Inhalte</h2>
               <p className="mb-2">Die Zuständigkeit für journalistische und redaktionelle Inhalte obliegt</p>
               <div className="mb-6 bg-gray-50 p-4 rounded-md">
-                <p><strong>Name:</strong> Kevin Nolting</p>
-                <p><strong>Adresse:</strong> Burgstraße 1, 32825 Blomberg</p>
-                <p><strong>E-Mail:</strong> <a href="mailto:zwiegespraechtheater@gmx.de" className="text-gray-600 hover:underline">zwiegespraechtheater@gmx.de</a></p>
-                <p><strong>Telefon:</strong> 015737000047</p>
+                <div className="mb-4">
+                  <p><strong>Name:</strong> Kevin Nolting</p>
+                  <p><strong>Adresse:</strong> Burgstraße 1, 32825 Blomberg</p>
+                  <p><strong>E-Mail:</strong> <a href="mailto:info@zwiegespraech-theater.de" className="text-gray-600 hover:underline">info@zwiegespraech-theater.de</a></p>
+                  <p><strong>Telefon:</strong> 015737000047</p>
+                </div>
+                <div>
+                  <p><strong>Name:</strong> Luis-Pascal Lessing</p>
+                  <p><strong>Adresse:</strong> Moltkestraße 20, 32105 Bad Salzuflen</p>
+                  <p><strong>E-Mail:</strong> <a href="mailto:presse@zwiegespraech-theater.de" className="text-gray-600 hover:underline">presse@zwiegespraech-theater.de</a></p>
+                  <p><strong>Telefon:</strong> 015737000047</p>
+                </div>
               </div>
 
               {/* Datenschutz Section */}
@@ -70,12 +78,12 @@ export default function ImpressumPage() {
               <div className="mb-6 bg-gray-50 p-4 rounded-md">
                 <p><strong>Bastian Bühler</strong><br />
                 Liegnitzer Straße 15, 33098 Paderborn<br />
-                <a href="mailto:zwiegespraechtheater@gmx.de" className="text-gray-600 hover:underline">zwiegespraechtheater@gmx.de</a><br />
+                <a href="mailto:vorstand@zwiegespraech-theater.de" className="text-gray-600 hover:underline">vorstand@zwiegespraech-theater.de</a><br />
                 015737000047</p>
                 
                 <p className="mt-4"><strong>Kevin Nolting</strong><br />
                 Burgstraße 1, 32825 Blomberg<br />
-                <a href="mailto:zwiegespraechtheater@gmx.de" className="text-gray-600 hover:underline">zwiegespraechtheater@gmx.de</a><br />
+                <a href="mailto:info@zwiegespraech-theater.de" className="text-gray-600 hover:underline">info@zwiegespraech-theater.de</a><br />
                 015737000047</p>
               </div>
 
@@ -99,7 +107,7 @@ export default function ImpressumPage() {
 
               <h2 className="text-2xl font-bold mb-4">Zweck und Dauer der Datenverarbeitung</h2>
               <p className="mb-6">
-                Die automatische Erfassung Ihrer Nutzer- und Kommunikationsdaten beim Besuch unserer Website dient notwendigerweise der Herstellung der technischen Verbindung und Nutzbarkeit unserer Website. Soweit Sie das auf unserer Homepage enthaltene Kontaktformular verwenden oder Sie uns über die Seite eine E-Mail schicken, dient die Erfassung der in diesem Zusammenhang bekannt gegebenen Kontaktdaten (in der Regel nur Name und E-Mail-Adresse) lediglich der entsprechenden Rückmeldung unsererseits. Eventuelle zusätzliche Angaben, die Sie uns übermitteln, werden allein dem Zweck und Anlass entsprechend verarbeitet. Nach Wegfall des Grundes für die Speicherung, werden die Daten unverzüglich gelöscht oder -- sofern im Einzelfall erforderlich -- gesperrt. Wenn Sie unser Online-Formular für einen Antrag auf Vereinsmitgliedschaft nutzen, werden Ihre dort gemachten Angaben allein zur Begründung und Durchführung des mitgliedschaftlichen Vertragsverhältnisses verwendet. Diese Daten werden lediglich für die Dauer der Vereinsmitgliedschaft im Rahmen unserer Mitgliederverwaltung gespeichert und ausschließlich hierfür genutzt. Nach Beendigung der Mitgliedschaft werden die Daten gelöscht oder -- soweit notwendig -- gesperrt.
+                Die automatische Erfassung Ihrer Nutzer- und Kommunikationsdaten beim Besuch unserer Website dient notwendigerweise der Herstellung der technischen Verbindung und Nutzbarkeit unserer Website. Soweit Sie das auf unserer Homepage enthaltene Kontaktformular verwenden oder Sie uns über die Seite eine E-Mail schicken, dient die Erfassung der in diesem Zusammenhang bekannt gegebenen Kontaktdaten (in der Regel nur Name und E-Mail-Adresse) lediglich der entsprechenden Rückmeldung unsererseits. Eventuelle zusätzliche Angaben, die Sie uns übermitteln, werden allein dem Zweck und Anlass entsprechend verarbeitet. Nach Wegfall des Grundes für die Speicherung, werden die Daten unverzüglich gelöscht oder – sofern im Einzelfall erforderlich – gesperrt. Wenn Sie unser Online-Formular für einen Antrag auf Vereinsmitgliedschaft nutzen, werden Ihre dort gemachten Angaben allein zur Begründung und Durchführung des mitgliedschaftlichen Vertragsverhältnisses verwendet. Diese Daten werden lediglich für die Dauer der Vereinsmitgliedschaft im Rahmen unserer Mitgliederverwaltung gespeichert und ausschließlich hierfür genutzt. Nach Beendigung der Mitgliedschaft werden die Daten gelöscht oder – soweit notwendig – gesperrt.
               </p>
 
               <h2 className="text-2xl font-bold mb-4">Weitergabe von personenbezogenen Daten</h2>

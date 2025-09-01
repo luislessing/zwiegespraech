@@ -1,41 +1,18 @@
 "use client";
 
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useEffect } from 'react';
 import SEO from '@/components/SEO';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 
-// TypeScript Interface für das Formular
-interface FormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  telephone: string;
-  message: string;
-  gdprConsent: boolean;
-}
-
 export default function KontaktPage() {
-  const [formData, setFormData] = useState<FormData>({
-    firstName: '',
-    lastName: '',
-    email: '',
-    telephone: '',
-    message: '',
-    gdprConsent: false
-  });
-  
-  const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
-  const [formError, setFormError] = useState<string>('');
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Zwiegespräch Theater",
     "telephone": "+49-157-37000047",
-    "email": "info@zwiegespraech-theater.de",
+    "email": "zwiegespraechtheater.de",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Paderborn",
@@ -49,80 +26,11 @@ export default function KontaktPage() {
     }
   };
 
-  // Event-Handler mit TypeScript-Typen
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value, type } = e.target;
-    
-    if (type === 'checkbox') {
-      const checked = (e.target as HTMLInputElement).checked;
-      setFormData(prev => ({
-        ...prev,
-        [name]: checked
-      }));
-    } else {
-      setFormData(prev => ({
-        ...prev,
-        [name]: value
-      }));
-    }
-  };
-
-  // Formular-Submit-Handler
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    
-    // Basic validation
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.gdprConsent) {
-      setFormError('Bitte füllen Sie alle Pflichtfelder aus.');
-      return;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      setFormError('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
-      return;
-    }
-    
-    // Show loading state
-    setIsSubmitting(true);
-    setFormError('');
-    
-    // Debug: Log what we're sending
-    const payload = {
-      name: `${formData.firstName} ${formData.lastName}`,
-      email: formData.email,
-      phone: formData.telephone || '',
-      message: formData.message || '',
-      consent: formData.gdprConsent
-    };
-    console.log('Sending payload:', payload);
-    
-    try {
-      // Send data to our API route
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      });
-      
-      const data = await response.json();
-      
-      if (response.ok) {
-        setFormSubmitted(true);
-        console.log('Form submitted successfully');
-      } else {
-        throw new Error(data.message || 'Form submission failed');
-      }
-    } catch (error: any) {
-      console.error('Error submitting form:', error);
-      setFormError(error.message || 'Beim Senden des Formulars ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  // JotForm Script laden
+  useEffect(() => {
+    // Hier wird das JotForm Script dynamisch geladen, falls nötig
+    // Das passiert automatisch, wenn Sie das Script-Tag verwenden
+  }, []);
 
   return (
     <>
@@ -145,154 +53,53 @@ export default function KontaktPage() {
         </section>
         
         <main className="flex-grow">
-          {/* Contact Form Section */}
+          {/* JotForm Section */}
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
-              <div className="max-w-3xl mx-auto">
-                {formSubmitted ? (
-                  <div className="text-center bg-green-100 border border-green-400 text-green-700 px-4 py-8 rounded mb-8">
-                    <h3 className="text-2xl font-bold mb-4">Vielen Dank für Ihre Nachricht!</h3>
-                    <p className="text-lg">Wir werden uns so schnell wie möglich bei Ihnen melden.</p>
-                    <button 
-                      onClick={() => {
-                        setFormSubmitted(false);
-                        setFormData({
-                          firstName: '',
-                          lastName: '',
-                          email: '',
-                          telephone: '',
-                          message: '',
-                          gdprConsent: false
-                        });
-                      }}
-                      className="mt-6 bg-gray-900 hover:bg-gray-800 text-white font-bold py-2 px-6 rounded-md transition-colors"
-                    >
-                      Neues Formular
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    {formError && (
-                      <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-                        {formError}
-                      </div>
-                    )}
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-white rounded-lg shadow-lg p-8">
+                  {<script type="text/javascript" src="https://form.jotform.com/jsform/252012751934048"></script>}
+                  <iframe
+                    id="JotFormIFrame-252012751934048"
+                    title="Kontaktformular Zwiegespräch Theater"
+                    onLoad={() => {
+                      if (typeof window !== 'undefined' && window.parent) {
+                        window.parent.scrollTo(0,0);
+                      }
+                    }}
+                    allowTransparency={true}
+                    src="https://form.jotform.com/252012751934048"
+                    frameBorder="0"
+                    style={{
+                      minWidth: '100%',
+                      maxWidth: '100%',
+                      height: '1200px', // Passen Sie die Höhe nach Bedarf an
+                      border: 'none'
+                    }}
+                    scrolling="no"
+                  />
+                  
+                  {/* 
+                    Option 2: Script-Tag (Alternative)
+                    Verwenden Sie entweder iFrame ODER Script, nicht beide!
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label htmlFor="firstName" className="block text-gray-700 font-medium mb-2">
-                          Vorname <span className="text-red-600">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          id="firstName"
-                          name="firstName"
-                          value={formData.firstName}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
-                        />
-                      </div>
-                      
-                      <div>
-                        <label htmlFor="lastName" className="block text-gray-700 font-medium mb-2">
-                          Nachname <span className="text-red-600">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          id="lastName"
-                          name="lastName"
-                          value={formData.lastName}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-                          E-Mail <span className="text-red-600">*</span>
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
-                        />
-                      </div>
-                      
-                      <div>
-                        <label htmlFor="telephone" className="block text-gray-700 font-medium mb-2">
-                          Telefon
-                        </label>
-                        <input
-                          type="tel"
-                          id="telephone"
-                          name="telephone"
-                          value={formData.telephone}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
-                        Nachricht
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        rows={5}
-                        placeholder="Meine Nachricht"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
-                      ></textarea>
-                    </div>
-                    
-                    <div className="flex items-start">
-                      <div className="flex items-center h-5">
-                        <input
-                          type="checkbox"
-                          id="gdprConsent"
-                          name="gdprConsent"
-                          checked={formData.gdprConsent}
-                          onChange={handleChange}
-                          required
-                          className="w-4 h-4 text-gray-900 border-gray-300 rounded focus:ring-gray-500"
-                        />
-                      </div>
-                      <div className="ml-3 text-sm">
-                        <label htmlFor="gdprConsent" className="text-gray-700">
-                          Ich erkläre mich mit der Verarbeitung der eingegebenen Daten sowie der{' '}
-                          <a href="/impressum" className="text-gray-600 hover:underline">
-                            Datenschutzerklärung
-                          </a>{' '}
-                          einverstanden. <span className="text-red-600">*</span>
-                        </label>
-                      </div>
-                    </div>
-                    
-                    <div className="text-center mt-8">
-                      <p className="text-sm text-gray-600 mb-4">* Pflichtfelder</p>
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className={`${
-                          isSubmitting ? 'bg-gray-500 cursor-not-allowed' : 'bg-gray-900 hover:bg-gray-800'
-                        } text-white font-bold py-3 px-8 rounded-md transition-colors`}
-                      >
-                        {isSubmitting ? 'Wird gesendet...' : 'Absenden'}
-                      </button>
-                    </div>
-                  </form>
-                )}
+                    <script 
+                      type="text/javascript" 
+                      src="https://form.jotform.com/jsform/YOUR_FORM_ID"
+                    />
+                  */}
+                  
+                  {/* Fallback für den Fall, dass JotForm nicht lädt */}
+                  <noscript>
+                    <p className="text-center text-gray-600">
+                      Das Kontaktformular benötigt JavaScript. Bitte aktivieren Sie JavaScript in Ihrem Browser oder 
+                      kontaktieren Sie uns direkt per E-Mail: 
+                      <a href="mailto:zwiegespraechtheater@gmx.de" className="text-blue-600 hover:underline ml-1">
+                        zwiegespraechtheater@gmx.de
+                      </a>
+                    </p>
+                  </noscript>
+                </div>
               </div>
             </div>
           </section>
@@ -320,8 +127,8 @@ export default function KontaktPage() {
                     <ul className="space-y-3">
                       <li className="flex">
                         <span className="font-medium mr-2">E-Mail:</span>
-                        <a href="mailto:info@zwiegespraech-theater.de" className="text-gray-600 hover:underline">
-                          info@zwiegespraech-theater.de
+                        <a href="mailto:zwiegespraechtheater@gmx.de" className="text-gray-600 hover:underline">
+                          zwiegespraechtheater@gmx.de
                         </a>
                       </li>
                     </ul>

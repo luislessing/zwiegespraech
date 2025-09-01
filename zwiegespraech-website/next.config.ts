@@ -6,8 +6,11 @@ const nextConfig: NextConfig = {
     // ESLint während des Builds ignorieren
     ignoreDuringBuilds: true,
   },
-  // output: 'export', // Auskommentiert, um API-Routen zu ermöglichen
-  // andere Konfigurationsoptionen hier...
+  output: 'export', // Wieder aktiviert für statisches Hosting
+  trailingSlash: true, // Hilft bei statischem Hosting
+  images: {
+    unoptimized: true // Nötig für statischen Export
+  }
 };
 
 export default nextConfig;
