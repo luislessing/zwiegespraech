@@ -15,7 +15,7 @@ export default function HeroSlideshow() {
   const slides: SlideProps[] = [
     {
       title: "Zw[i:]g[ə]spräch",
-      image: "images/picture-1600.webp", // Hier später richtiges Bild einsetzen
+      image: "images/picture-1600.webp",
       alt: "Theater Logo",
       subtitle: "Alles Weitere wird Kunst"
     },

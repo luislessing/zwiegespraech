@@ -8,9 +8,9 @@ export default function HomePage() {
   const theaterSchema = {
     "@context": "https://schema.org",
     "@type": "TheaterGroup",
-    "name": "Zwiegespräch Theater",
-    "alternateName": "Schauspielkollektiv Zwiegespräch",
-    "description": "Zwiegespräch Theater - Experimentelles Schauspielkollektiv aus Paderborn. Erleben Sie Dialog, Reflexion und moderne Theaterkunst. Aktuelle Produktionen und Aufführungen in NRW.",
+    "name": "Zwiegespräch e.V.",
+    "alternateName": "Zwiegespräch e.V.",
+    "description": "Zwiegespräch e.V. - Experimenteller Theaterverein aus Paderborn. Erleben Sie Dialog, Reflexion und moderne Theaterkunst. Aktuelle Produktionen und Aufführungen in NRW.",
     "url": "https://zwiegespräch-theater.de",
     "sameAs": [
       "https://www.instagram.com/zwiegespraech_theater",
@@ -47,9 +47,9 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title="Zwiegespräch Theater - Schauspielkollektiv Paderborn | Alles Weitere wird Kunst"
-        description="Schauspielkollektiv Zwiegespräch aus Paderborn. Experimentelles Theater, Dialog und Reflexion. Aktuelle Produktionen und Aufführungstermine."
-        keywords="Theater Paderborn, Schauspielkollektiv, Zwiegespräch, experimentelles Theater, Aufführungen, Kultur Paderborn"
+        title="Zwiegespräch Theater - Theaterverein aus Paderborn | Alles Weitere wird Kunst"
+        description="Zwiegespräch e.V. aus Paderborn. Experimentelles Theater, Dialog und Reflexion. Aktuelle Produktionen und Aufführungstermine."
+        keywords="Theater Paderborn, Schauspiel, Zwiegespräch, experimentelles Theater, Aufführungen, Kultur Paderborn"
         canonical="/"
         ogImage="/images/hero-theater.webp"
         schema={theaterSchema}
@@ -77,7 +77,7 @@ export default function HomePage() {
                   Genauso verstehen wir das Zw[i:]g[ə]spräch nicht nur als einmaliges Projekt, 
                   sondern als eine langfristige Entwicklung, deren Grenzen wir selbst noch
                   gar nicht einsehen können und möchten - auch wie bei einem gutem 
-                  Gespräch. Das alles soll Kern unseres Schauspielkollektivs sein.
+                  Gespräch. Das alles soll Kern unseres Theatervereins sein.
                 </p>
                 <p className="text-lg mt-6">
                   Also kommt ran, wir haben zu <a href="/kontakt" className="text-gray-600 hover:underline">sprechen</a>.
@@ -93,21 +93,21 @@ export default function HomePage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow bg-white">
                   <img 
-                    src="/images/Kunst/impression5.webp" 
+                    src="/images/Kunst/IMG_8632.webp" 
                     alt="Theaterszene - Zwiegespräch Aufführung" 
                     className="w-full h-64 object-cover" 
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow bg-white">
                   <img 
-                    src="/images/Kunst/impression4.webp" 
-                    alt="Schauspielkollektiv Zwiegespräch bei Probe" 
+                    src="/images/Kunst/IMG_8882.webp" 
+                    alt="Zwiegespräch e.V. bei Probe" 
                     className="w-full h-64 object-cover" 
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow bg-white">
                   <img 
-                    src="/images/Kunst/impression3.webp" 
+                    src="/images/Kunst/IMG_9203.webp" 
                     alt="Experimentelles Theater Paderborn" 
                     className="w-full h-64 object-cover" 
                   />
@@ -127,26 +127,7 @@ export default function HomePage() {
             </div>
           </section>
 
-          {/* News/Updates */}
-          <section className="py-16 bg-white">
-            <div className="container mx-auto px-4">
-              <h2 className="text-3xl font-bold text-center mb-12">Neuigk[aɪ̯]ten</h2>
-              <div className="max-w-4xl mx-auto">
-                <article className="border-l-4 border-gray-800 pl-6 py-2 mb-8">
-                  <h3 className="text-xl font-bold mb-2">Neue Produktion in Arbeit</h3>
-                  <p className="text-gray-600">Wir arbeiten an einer neuen Inszenierung. Details folgen bald!</p>
-                </article>
-                <article className="border-l-4 border-gray-800 pl-6 py-2 mb-8">
-                  <h3 className="text-xl font-bold mb-2">Workshop-Reihe im Herbst</h3>
-                  <p className="text-gray-600">Im September starten wir mit einer neuen Workshop-Reihe.</p>
-                </article>
-                <article className="border-l-4 border-gray-800 pl-6 py-2">
-                  <h3 className="text-xl font-bold mb-2">Weitere Aufführungstermine</h3>
-                  <p className="text-gray-600">Weitere Aufführungstermine folgen in Kürze.</p>
-                </article>
-              </div>
-            </div>
-          </section>
+
         </main>
 
         <Footer />

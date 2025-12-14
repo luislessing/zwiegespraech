@@ -1,0 +1,20 @@
+          {/* News/Updates */}
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl font-bold text-center mb-12">Neuigk[aɪ̯]ten</h2>
+              <div className="max-w-4xl mx-auto">
+                <article className="border-l-4 border-gray-800 pl-6 py-2 mb-8">
+                  <h3 className="text-xl font-bold mb-2">Neue Produktion in Arbeit</h3>
+                  <p className="text-gray-600">Wir arbeiten an einer neuen Inszenierung. Details folgen bald!</p>
+                </article>
+                <article className="border-l-4 border-gray-800 pl-6 py-2 mb-8">
+                  <h3 className="text-xl font-bold mb-2">Workshop-Reihe im Herbst</h3>
+                  <p className="text-gray-600">Im September starten wir mit einer neuen Workshop-Reihe.</p>
+                </article>
+                <article className="border-l-4 border-gray-800 pl-6 py-2">
+                  <h3 className="text-xl font-bold mb-2">Weitere Aufführungstermine</h3>
+                  <p className="text-gray-600">Weitere Aufführungstermine folgen in Kürze.</p>
+                </article>
+              </div>
+            </div>
+          </section>

@@ -51,7 +51,7 @@ export default function UeberUnsPage() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zwiegespräch Theater",
-    "description": "Schauspielkollektiv mit Fokus auf experimentelles Theater und Dialog",
+    "description": "Theaterverein mit Fokus auf experimentelles Theater und Dialog",
     "url": "https://zwiegespräch-theater.de/ueber-uns/",
     "foundingDate": "2024",
     "foundingLocation": {
@@ -397,10 +397,10 @@ export default function UeberUnsPage() {
   return (
     <>
       <SEO 
-        title="Über uns - Das Schauspielkollektiv Zwiegespräch" 
-        description="Lernen Sie das Schauspielkollektiv Zwiegespräch kennen. 25 Theatermacher aus Paderborn und Umgebung. Experimentelles Theater und Dialog im Fokus." 
+        title="Über uns - Zwiegespräch e.V." 
+        description="Lernen Sie Zwiegespräch e.V. kennen. 25 Theatermacher aus Paderborn und Umgebung. Experimentelles Theater und Dialog im Fokus." 
         canonical="/ueber-uns/" 
-        keywords="Schauspielkollektiv Team, Theater Paderborn Mitglieder, experimentelles Theater NRW, Zwiegespräch Theater"
+        keywords="Theater Team, Theater Paderborn Mitglieder, experimentelles Theater NRW, Zwiegespräch Theater"
         schema={organizationSchema} 
       />
       
@@ -411,7 +411,7 @@ export default function UeberUnsPage() {
         <section className="pt-32 pb-16 bg-gray-900 text-white">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">Über [ˈʊ]ns</h1>
-            <h2 className="text-3xl font-normal mb-8 text-center">Wer verbirgt sich hinter dem Schauspielkollektiv Zw[i:]g[ə]spräch?</h2>
+            <h2 className="text-3xl font-normal mb-8 text-center">Wer verbirgt sich hinter Zw[i:]g[ə]spräch e.V.?</h2>
           </div>
         </section>
         
@@ -479,7 +479,7 @@ export default function UeberUnsPage() {
                     Genauso verstehen wir das Zw[i:]g[ə]spräch nicht nur als einmaliges Projekt, 
                     sondern als eine langfristige Entwicklung, deren Grenzen wir selbst noch
                     gar nicht einsehen können und möchten - auch wie bei einem gutem 
-                    Gespräch. Das alles soll Kern unseres Schauspielkollektivs sein.
+                    Gespräch. Das alles soll Kern unseres Theatervereins sein.
                   </p>
                   <p>
                     Also kommt ran, wir haben zu sprechen.

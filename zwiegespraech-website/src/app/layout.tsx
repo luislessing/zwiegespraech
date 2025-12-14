@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Zwiegespräch Theater',
-  description: 'Alles Weitere wird Kunst',
+  description: 'Schauspielkollektiv Zwiegespräch aus Paderborn. Experimentelles Theater, Dialog und Reflexion. Aktuelle Produktionen und Aufführungstermine.',
 };
 
 export default function RootLayout({

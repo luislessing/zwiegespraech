@@ -116,8 +116,8 @@ export default function ArchivPage() {
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold mb-8">Über das Archiv</h2>
               <p className="text-lg mb-6">
-                In unserem Archiv finden Sie Informationen zu allen bisherigen Produktionen des
-                Schauspielkollektivs Zw[i:]g[ə]spräch. Wir dokumentieren hier unsere künstlerische
+                In unserem Archiv finden Sie Informationen zu allen bisherigen Produktionen von
+                Zw[i:]g[ə]spräch e.V.. Wir dokumentieren hier unsere künstlerische
                 Arbeit und bewahren die Erinnerungen an vergangene Projekte.
               </p>
               <p className="text-lg mb-6">

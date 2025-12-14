@@ -36,9 +36,9 @@ export default function KontaktPage() {
     <>
       <SEO
         title="Kontakt - Zwiegespräch Theater Paderborn"
-        description="Kontaktieren Sie das Schauspielkollektiv Zwiegespräch. Anfragen für Aufführungen, Termine und Kooperationen. Theater aus Paderborn."
+        description="Kontaktieren Sie Zwiegespräch e.V.. Anfragen für Aufführungen, Termine und Kooperationen. Theater aus Paderborn."
         canonical="/kontakt/"
-        keywords="Theater Kontakt Paderborn, Schauspielkollektiv anfragen, Aufführungen buchen"
+        keywords="Theater Kontakt Paderborn, Schauspiel anfragen, Aufführungen buchen"
         schema={localBusinessSchema}
       />
       <div className="min-h-screen bg-gray-100 text-gray-900 flex flex-col">
@@ -94,8 +94,8 @@ export default function KontaktPage() {
                     <p className="text-center text-gray-600">
                       Das Kontaktformular benötigt JavaScript. Bitte aktivieren Sie JavaScript in Ihrem Browser oder 
                       kontaktieren Sie uns direkt per E-Mail: 
-                      <a href="mailto:zwiegespraechtheater@gmx.de" className="text-blue-600 hover:underline ml-1">
-                        zwiegespraechtheater@gmx.de
+                      <a href="mailto:info@zwiegespraech-theater.de" className="text-blue-600 hover:underline ml-1">
+                        info@zwiegespraech-theater.de
                       </a>
                     </p>
                   </noscript>
@@ -127,8 +127,8 @@ export default function KontaktPage() {
                     <ul className="space-y-3">
                       <li className="flex">
                         <span className="font-medium mr-2">E-Mail:</span>
-                        <a href="mailto:zwiegespraechtheater@gmx.de" className="text-gray-600 hover:underline">
-                          zwiegespraechtheater@gmx.de
+                        <a href="mailto:info@zwiegespraech-theater.de" className="text-gray-600 hover:underline">
+                          info@zwiegespraech-theater.de
                         </a>
                       </li>
                     </ul>

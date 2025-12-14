@@ -32,11 +32,12 @@ export default function ProduktionPage() {
   ];
 
   const galleryImages = [
-    "/images/Kunst/impression1.webp",
-    "/images/Kunst/impression2.webp",
-    "/images/Kunst/impression3.webp",
-    "/images/Kunst/impression4.webp",
-    "/images/Kunst/impression5.webp"
+    "/images/Kunst/IMG_8897.webp",
+    "/images/Kunst/IMG_8700.webp",
+    "/images/Kunst/IMG_8747.webp",
+    "/images/Kunst/IMG_8801.webp",
+    "/images/Kunst/IMG_9087.webp",
+    "/images/Kunst/IMG_9190.webp"
   ];
 
   return (

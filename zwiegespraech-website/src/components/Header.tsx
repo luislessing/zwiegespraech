@@ -23,7 +23,9 @@ export default function Header() {
     }`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <div className="text-2xl font-bold">Zw[i:]g[ə]spräch</div>
+          <Link href="/" className="text-2xl font-bold hover:text-gray-400 transition-colors">
+            Zw[i:]g[ə]spräch
+          </Link>
         </div>
         
         {/* Desktop Navigation */}

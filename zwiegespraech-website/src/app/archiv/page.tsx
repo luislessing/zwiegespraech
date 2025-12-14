@@ -33,8 +33,8 @@ export default function ArchivPage() {
               </p>
               <p className="text-lg mb-12">
                 Das Archiv befindet sich derzeit im Aufbau. Schauen Sie bald wieder vorbei,
-                um mehr über die Geschichte und bisherigen Inszenierungen des Schauspielkollektivs
-                Zw[i:]g[ə]spräch zu erfahren.
+                um mehr über die Geschichte und bisherigen Inszenierungen von Zw[i:]g[ə]spräch e.V. 
+                zu erfahren.
               </p>
               <div className="mt-8">
                 <a href="/produktion" className="bg-gray-900 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-md transition-colors inline-block">
@@ -62,8 +62,8 @@ export default function ArchivPage() {
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold mb-8 text-center">Über das künftige Archiv</h2>
               <p className="text-lg mb-6">
-                In unserem Archiv werden Sie zukünftig Informationen zu allen bisherigen Produktionen des
-                Schauspielkollektivs Zw[i:]g[ə]spräch finden. Wir dokumentieren hier unsere künstlerische
+                In unserem Archiv werden Sie zukünftig Informationen zu allen bisherigen Produktionen von
+                Zw[i:]g[ə]spräch e.V. finden. Wir dokumentieren hier unsere künstlerische
                 Arbeit und bewahren die Erinnerungen an vergangene Projekte.
               </p>
               <p className="text-lg">
